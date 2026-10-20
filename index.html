@@ -5,22 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Relativistic Rydberg | Deterministic Bound Hydrogenic Trajectories</title>
     
-    <!-- Stable MathJax Configuration for standard LaTeX parsing -->
-    <script>
-        window.MathJax = {
-            tex: {
-                inlineMath: [['$', '$'], ['\\(', '\\)']],
-                displayMath: [['$$', '$$'], ['\\[', '\\]']]
-            },
-            svg: {
-                fontCache: 'global'
-            }
-        };
+    <!-- Load KaTeX CSS Layouts -->
+    <link rel="stylesheet" href="https://jsdelivr.net">
+
+    <!-- Load the Core KaTeX Engine -->
+    <script defer src="https://jsdelivr.net"></script>
+
+    <!-- Load the Automatic Render Extension -->
+    <script defer src="https://jsdelivr.net"
+        onload="renderMathInElement(document.body, {
+            delimiters: [
+                {left: '$$', right: '$$', display: true},
+                {left: '$', right: '$', inline: true},
+                {left: '\\(', right: '\\)', inline: true},
+                {left: '\\[', right: '\\]', display: true}
+            ],
+            throwOnError : false
+        });">
     </script>
-    <script id="MathJax-script" async src="https://jsdelivr.net"></script>
     
     <link rel="stylesheet" href="style.css">
 </head>
+
 
 <body>
     <header>
