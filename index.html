@@ -3,31 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Relativistic Rydberg | Deterministic Bound Hydrogenic Trajectories</title>
+    <title>The Relativistic Rydberg | Deterministic Hydrogenic Trajectories</title>
     
-    <!-- Load KaTeX CSS Layouts -->
+    <!-- 1. Load official KaTeX CSS stylesheets -->
     <link rel="stylesheet" href="https://jsdelivr.net">
 
-    <!-- Load the Core KaTeX Engine -->
+    <!-- 2. Load the main KaTeX engine core -->
     <script defer src="https://jsdelivr.net"></script>
 
-    <!-- Load the Automatic Render Extension -->
-    <script defer src="https://jsdelivr.net"
-        onload="renderMathInElement(document.body, {
-            delimiters: [
-                {left: '$$', right: '$$', display: true},
-                {left: '$', right: '$', inline: true},
-                {left: '\\(', right: '\\)', inline: true},
-                {left: '\\[', right: '\\]', display: true}
-            ],
-            throwOnError : false
-        });">
+    <!-- 3. Load the official Auto-Render script extension -->
+    <script defer src="https://jsdelivr.net"></script>
+
+    <!-- 4. Execute the bulletproof text scanner once the DOM is fully loaded -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', inline: true},
+                    {left: '\\(', right: '\\)', inline: true},
+                    {left: '\\[', right: '\\]', display: true}
+                ],
+                throwOnError : false
+            });
+        });
     </script>
     
     <link rel="stylesheet" href="style.css">
 </head>
-
-
 <body>
     <header>
         <h1>The Relativistic Rydberg</h1>
@@ -54,20 +57,17 @@
             <h2>2. Core Mathematical Architecture</h2>
             <p>By evaluating the pure Lorentz variant under the perpendicular geometric projections of a bound nucleus, the electron's velocity vector yields a stable wave equation:</p>
             
-            <!-- Block Display Equation -->
-            <div class="math-display">v(t) = c \sin\left(\frac{Ft}{m_0 c}\right)</div>
+            $$v(t) = c \sin\left(\frac{Ft}{m_0 c}\right)$$
             
-            <p>Executing a Pythagorean quadrature relation between orbital <em>vis viva</em> energy and transverse radiant wave energy establishes the Mass-Energy Quadrature:</p>
+            <p>Executing a Pythagorean quadrature relation between orbital <em>vis viva</em> energy ($m_e v^2$) and transverse radiant wave energy ($hf$) establishes the Mass-Energy Quadrature:</p>
             
-            <!-- Block Display Equation -->
-            <div class="math-display">(m_e v^2)^2 + (hf)^2 = (m_e c^2)^2</div>
+            $$(m_e v^2)^2 + (hf)^2 = (m_e c^2)^2$$
             
-            <p>Quantizing this motion at the reduced Compton radius (<span class="math-inline">r_n = n\overline{\lambda}_e</span>) produces the streamlined scalar expression:</p>
+            <p>Quantizing this motion at the reduced Compton radius ($r_n = n\overline{\lambda}_e$) produces the streamlined scalar expression:</p>
             
-            <!-- Block Display Equation -->
-            <div class="math-display">E_n = \mu c^2 \sqrt{1 - \frac{Z^2 \alpha^2}{n^2}}</div>
+            $$E_n = \mu c^2 \sqrt{1 - \frac{Z^2 \alpha^2}{n^2}}$$
             
-            <p><strong>Dirac Convergence:</strong> When spin and orbital angular momentum are maximized (<span class="math-inline">l_{max} = n - 1</span>, <span class="math-inline">j_{max} = l + 1/2</span>), the complex multi-component spinor Dirac equation collapses algebraically into this exact scalar format, serving as a powerful mathematical validation of structural realism.</p>
+            <p><strong>Dirac Convergence:</strong> When spin and orbital angular momentum are maximized ($l_{max} = n - 1$, $j_{max} = l + 1/2$), the complex multi-component spinor Dirac equation collapses algebraically into this exact scalar format, serving as a powerful mathematical validation of structural realism.</p>
         </section>
 
         <section id="validation">
@@ -85,14 +85,14 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>Lyman-Alpha (<span class="math-inline">1s - 2p_{3/2}</span>)</strong> in H</td>
-                            <td><span class="math-inline">2.46607946 \times 10^{15}</span> Hz</td>
+                            <td><strong>Lyman-Alpha ($1s - 2p_{3/2}$)</strong> in H</td>
+                            <td>$2.46607946 \times 10^{15}$ Hz</td>
                             <td>NIST Reference Database</td>
-                            <td>Matches to 9 digits after accounting for the ground-state Lamb shift (<span class="math-inline">\approx 8.173</span> GHz).</td>
+                            <td>Matches to 9 digits after accounting for the ground-state Lamb shift ($\approx 8.173$ GHz).</td>
                         </tr>
                         <tr>
-                            <td><strong>Balmer-Alpha (<span class="math-inline">2p_{3/2} - 3d_{5/2}</span>)</strong> in D</td>
-                            <td><span class="math-inline">4.56800240 \times 10^{14}</span> Hz</td>
+                            <td><strong>Balmer-Alpha ($2p_{3/2} - 3d_{5/2}$)</strong> in D</td>
+                            <td>$4.56800240 \times 10^{14}$ Hz</td>
                             <td>Hänsch (Stanford Group)</td>
                             <td>Aligns up to the 8th/9th significant digit; deviations rest within narrow experimental error boundaries.</td>
                         </tr>
@@ -107,6 +107,16 @@
             </div>
         </section>
 
+        <section id="experimental">
+            <h2>4. Non-Destructive Spectroscopic Protocol</h2>
+            <p>To avoid destructive photoionization bottlenecks at high energies, the proposal employs <strong>Attosecond Phase-Dispersion Spectroscopy (APDS)</strong> operating within an off-resonance detuning window:</p>
+            
+            $$\Delta n(\Delta\omega)\approx1-\frac{Ne^{2}}{2\epsilon_{0}m_{e}\omega_{0}}\left[\frac{\Delta\omega}{(\Delta\omega)^{2}+(\gamma/2)^{2}}\right]$$
+            
+            <p>An external magnetic field modulated at $f_m = 10$ kHz induces a predictable Zeeman splitting to completely separate target signals from common-mode background drift:</p>
+            
+            $$\Delta f_{Zeeman}=\frac{2\mu_{B}B}{h}\approx28.0\text{ GHz per Tesla}$$
+        </section>
     </main>
 
     <footer>
