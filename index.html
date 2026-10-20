@@ -4,17 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Relativistic Rydberg | Deterministic Bound Hydrogenic Trajectories</title>
-    <!-- MathJax Integration for high-fidelity LaTeX equation rendering -->
-    <script src="https://polyfill.io"></script>
-    <script id="MathJax-script" async src="https://jsdelivr.net"></script>
+    
+    <!-- Stable MathJax Configuration for standard LaTeX parsing -->
     <script>
         window.MathJax = {
-            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']] }
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
         };
     </script>
-    <script id="MathJax-script-2" async src="https://jsdelivr.net"></script>
+    <script id="MathJax-script" async src="https://jsdelivr.net"></script>
+    
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <h1>The Relativistic Rydberg</h1>
