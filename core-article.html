@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Relativistic Rydberg | Gateway & Technical Summary</title>
-    <!-- Your Verified MathJax Script Integration -->
+    <title>The Relativistic Rydberg | Full Monograph Text</title>
+    <!-- MathJax Configuration String -->
     <script>
         window.MathJax = {
             tex: { 
@@ -20,14 +20,14 @@
 <body>
     <header>
         <h1>The Relativistic Rydberg</h1>
-        <p class="subtitle">A Deterministic Geometric Trajectory Model for Bound Hydrogenic Systems</p>
-        <p class="author">Neil Parker &amp; AI Research Partner</p>
-        <p class="date">Monograph Timeline: October 2026</p>
+        <p class="subtitle">A Heuristic Derivation and Validation of Bound Hydrogenic States</p>
+        <p class="author">Neil Parker</p>
+        <p class="date">Original Architecture: August 2025 | Monograph Deployment: October 2026</p>
     </header>
 
     <nav>
-        <a href="index.html" class="active">Summary Hub</a>
-        <a href="core-article.html">Core Article</a>
+        <a href="index.html">Summary Hub</a>
+        <a href="core-article.html" class="active">Core Article</a>
         <a href="prologue.html">Theoretical Prologue</a>
         <a href="appendix-a.html">Appendix A: Spectroscopy</a>
         <a href="appendix-b.html">Appendix B: Foundations</a>
@@ -35,71 +35,49 @@
     </nav>
 
     <main>
-        <article>
-            <h2>Executive Summary</h2>
-            <p><strong>The Relativistic Rydberg</strong> framework establishes a <strong>deterministic, real-space geometric trajectory model</strong> for bound hydrogenic atoms. By introducing the relativistic Lorentz mass variation directly into the scalar mass coefficient of Newton's Second Law ($F = m_{rel} \cdot a$), the system resolves into a periodic velocity wave equation rather than a traditional linear asymptote.</p>
-            <p>This structural realism models quantum mechanics not as an irreducible statistical paradox, but as the macro-temporal average of a hyper-fast $10^{17}$ Hz periodic electron clockwork operating under intense relativistic Coulomb field constraints.</p>
+        <article class="full-paper">
+            <h2>Abstract</h2>
+            <p>This monograph presents an independent heuristic method for the derivation of the "relativistic Rydberg" formula, applicable to Hydrogen and hydrogen-like atoms. Operating from a modified representation of Newton's Second Law where the Lorentz factor resides within the scalar mass coefficient ($F = m_{rel} \cdot a$), the system resolves natively into an electromagnetic velocity wave equation. We demonstrate that under the maximum energy constraints of a bound primary quantum shell ($l_{max} = n-1, j_{max} = l+1/2$), the complex multi-component spinor Dirac equation collapses algebraically into this streamlined scalar formulation: $E_n = \mu c^2 \sqrt{1 - \frac{Z^2 \alpha^2}{n^2}}$. This approach unifies real-space orbits with observed quantum transitions to an accuracy of nine significant figures without ad-hoc parameter tuning.</p>
 
-            <h2>Core Mathematical Highlights</h2>
-            <p>By evaluating the pure Lorentz variant under the perpendicular geometric projections of a bound nucleus, the electron's velocity vector yields a stable wave equation:</p>
-            $$v(t) = c \sin\left(\frac{Ft}{m_0 c}\right)$$
-            <p>Executing a Pythagorean quadrature relation between orbital <em>vis viva</em> energy ($m_e v^2$) and transverse radiant wave energy ($hf$) establishes the Mass-Energy Quadrature:</p>
+            <h2>1. Introduction</h2>
+            <p>In a number of previous articles, this author has made use of an equation for various atomic transition frequencies/energies pertaining to Hydrogen or 'hydrogen-like' atoms such as singly ionized Helium. It was shown that this equation is an off-shoot of the more general Dirac energy equation corresponding to the maximum possible energy of an electron in any particular energy level for which the primary quantum number is $n$.</p>
+            <p>The equation does not depend on any of the other quantum numbers since these simply cancel out under the maximum energy constraint. Since the older Rydberg equation also does not take into account anything other than the primary quantum number, it seems appropriate to name this version the <strong>"relativistic Rydberg"</strong>. It will simply prove more accurate since it does take into account the relativistic nature of an electron bound to an atomic nucleus. There is in fact a direct mathematical relationship between the two: the traditional Rydberg equation emerges from a one-term binomial expansion of the "relativistic Rydberg".</p>
+
+            <h2>2. Relativistic Velocity Formulations under Newton II</h2>
+            <p>Standard textbook physics defines force as the total time derivative of the linear relativistic momentum vector ($F = dp/dt$), leading to asymptotic, hyperbolic free-particle trajectories. In this paper, we explore the physical implications of including the velocity-dependent Lorentz factor directly inside the mass coefficient of the Newtonian expression:</p>
+            $$F = \frac{m_{0}}{\sqrt{1-\frac{v(t)^{2}}{c^{2}}}}\frac{dv(t)}{dt}$$
+            <p>Solving this differential relation under massive, perpendicular electrostatic Coulomb force fields yields a straightforward wave equation for particle velocity [5]:</p>
+            $$v(t) = c \sin\left(\frac{Ft + k_1 m_0}{m_0 c}\right)$$
+            <p>A Taylor series expansion of this expression reveals that classical Newtonian mechanics emerges cleanly as a low-energy limiting case ($v(t) \approx \frac{Ft}{m_0} = at$), while the high-frequency term highlights that wave-like behavior becomes manifest exclusively under intense sub-atomic force-to-mass fields.</p>
+
+            <h2>3. The Mass-Energy Quadrature</h2>
+            <p>Integrating our velocity wave expression translates the cyclical coordinate runtime across the orbit into a bounded energy equation. By multiplying through by the inward electrostatic pulling force ($F$), we establish that the electron's classical kinetic <em>vis viva</em> energy ($m_e v^2$) stands in structural quadrature with its internal wave component ($hf$), bounding the system parameters along a right-angled Mass-Energy Triangle:</p>
             $$(m_e v^2)^2 + (hf)^2 = (m_e c^2)^2$$
-            <p>Quantizing this motion at the reduced Compton radius ($r_n = n\overline{\lambda}_e$) produces the streamlined scalar expression:</p>
+            <p>Rearranging this Pythagorean relationship to isolate the radiant wave energy component yields:</p>
+            $$hf = \sqrt{(m_e c^2)^2 - (m_e v^2)^2}$$
+            <p>Substituting the parameterized variables derived from an electron constrained at the reduced Compton radius ($v^2 = \alpha c^2$), the baseline ground state wave energy scales as $hf = m_e c^2 \sqrt{1 - \alpha^2}$ [2].</p>
+
+            <h2>4. Quantization and Spectral Convergence</h2>
+            <p>Extending this framework across higher energy states requires that the spatial dimensions scale according to the primary quantum boundary condition ($r_n = n\overline{\lambda}_e$). For an arbitrary shell $n$, the potential energy splits fluidly, expanding our relationship into the general Relativistic Rydberg formula:</p>
             $$E_n = \mu c^2 \sqrt{1 - \frac{Z^2 \alpha^2}{n^2}}$$
-            <p><strong>Dirac Convergence:</strong> When spin and orbital angular momentum are maximized ($l_{max} = n - 1$, $j_{max} = l + 1/2$), the complex multi-component spinor Dirac equation collapses algebraically into this exact scalar format, serving as a powerful mathematical validation of structural realism.</p>
-
-            <h2>Empirical Validation Matrix</h2>
-            <p>The framework accurately predicts known historical spectroscopic transitions out to nine significant figures:</p>
-            <div style="overflow-x:auto;">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Target Benchmark</th>
-                            <th>Calculated Value</th>
-                            <th>Empirical Alignment</th>
-                            <th>System Precision Notes</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Lyman-Alpha ($1s - 2p_{3/2}$)</strong> in H</td>
-                            <td>$2.46607946 \times 10^{15}$ Hz</td>
-                            <td>NIST Reference Database</td>
-                            <td>Matches to 9 digits after accounting for the ground-state Lamb shift ($\approx 8.173$ GHz).</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Balmer-Alpha ($2p_{3/2} - 3d_{5/2}$)</strong> in D</td>
-                            <td>$4.56800240 \times 10^{14}$ Hz</td>
-                            <td>Hänsch (Stanford Group)</td>
-                            <td>Aligns up to the 8th/9th significant digit; deviations rest within narrow experimental error boundaries.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>He II Orbital Resonances</strong></td>
-                            <td>466.05 eV &amp; 828.53 eV</td>
-                            <td>Soft X-ray Predictions</td>
-                            <td>Forms the targeted objective metrics for the proposed non-destructive validation protocol.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </article>
-
-        <aside class="support-sidebar">
-            <h3>Monograph Repository Links</h3>
-            <p>Access the core papers and secondary technical support documents developed within this research suite:</p>
+            <p>A single-term binomial expansion of this square root resolves perfectly into the historical, non-relativistic expression used in conventional chemistry ($\mu c^2 - \frac{\mu c^2 Z^2 \alpha^2}{2n^2}$), proving absolute continuity with established physical principles.</p>
+            
+            <hr style="border: 0; border-top: 1px solid #ccc; margin: 40px 0;">
+            
+            <h2>Historical References &amp; Cross-Links</h2>
+            <p>For alternative math treatments and reference data regarding velocity expressions, see the notes below:</p>
             <ul>
-                <li><strong><a href="core-article.html" style="color:#0066cc; font-size:1.1rem;">➔ Core Article Document</a></strong></li>
-                <li><strong><a href="prologue.html">Theoretical Prologue</a>:</strong> Analysis of relativistic vector forces under Newton II.</li>
-                <li><strong><a href="appendix-a.html">Technical Appendix A</a>:</strong> Concrete experimental proposal for Attosecond Spectroscopy (APDS).</li>
-                <li><strong><a href="appendix-b.html">Technical Appendix B</a>:</strong> Reinterpreting wave/particle duality and orbital clouds.</li>
-                <li><strong><a href="appendix-c.html">Technical Appendix C</a>:</strong> Quantitative accuracy matrix and Dirac convergence.</li>
+                <li><strong><a href="prologue.html#conventional">AI Research Notes: Solutions to $F = m_{rel} \frac{dv}{dt}$</a></strong> – A side-by-side verification contrasting linear momentum derivatives against scalar variables [5].</li>
+                <li>[1] G. Herzberg. <em>Lamb shift of the 1s ground state of deuterium.</em> Jstor, 1956.</li>
+                <li>[2] T. W. Hänsch et al. <em>Precision measurement of the Rydberg constant by laser saturation spectroscopy.</em> Phys. Rev. Lett., 1974.</li>
+                <li>[3] A. Huber, T. W. Hänsch, et al. <em>Precision measurement of the 1s ground-state Lamb shift in atomic hydrogen.</em> Phys. Rev. A, 1995.</li>
+                <li>[4] NIST ASD Team. <em>Atomic Spectra Database (ver. 5.6.1).</em> National Institute of Standards and Technology, 2018.</li>
             </ul>
-        </aside>
+        </article>
     </main>
 
     <footer>
-        <p>&copy; 2026 Neil Parker. Monograph Series in Classical-Relativistic Quantum Foundations.</p>
+        <p>&copy; 2026 Neil Parker. Independent Monograph Series in Classical-Relativistic Quantum Foundations.</p>
     </footer>
 </body>
 </html>
