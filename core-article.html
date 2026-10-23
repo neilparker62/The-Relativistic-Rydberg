@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Relativistic Rydberg | Full Monograph Text</title>
-    <!-- MathJax Configuration String -->
+    <!-- Verified MathJax v3 Configuration Block -->
     <script>
         window.MathJax = {
             tex: { 
@@ -14,7 +14,7 @@
             svg: { fontCache: 'global' }
         };
     </script>
-    <script async src="https://cloudflare.com"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -34,7 +34,7 @@
         <a href="appendix-c.html">Appendix C: Precision Matrix</a>
     </nav>
 
-    <main>
+    <main style="max-width: 850px; margin: 0 auto; padding: 20px;">
         <article class="full-paper">
             <h2>Abstract</h2>
             <p>This monograph presents an independent heuristic method for the derivation of the "relativistic Rydberg" formula, applicable to Hydrogen and hydrogen-like atoms. Operating from a modified representation of Newton's Second Law where the Lorentz factor resides within the scalar mass coefficient ($F = m_{rel} \cdot a$), the system resolves natively into an electromagnetic velocity wave equation. We demonstrate that under the maximum energy constraints of a bound primary quantum shell ($l_{max} = n-1, j_{max} = l+1/2$), the complex multi-component spinor Dirac equation collapses algebraically into this streamlined scalar formulation: $E_n = \mu c^2 \sqrt{1 - \frac{Z^2 \alpha^2}{n^2}}$. This approach unifies real-space orbits with observed quantum transitions to an accuracy of nine significant figures without ad-hoc parameter tuning.</p>
@@ -46,16 +46,16 @@
             <h2>2. Relativistic Velocity Formulations under Newton II</h2>
             <p>Standard textbook physics defines force as the total time derivative of the linear relativistic momentum vector ($F = dp/dt$), leading to asymptotic, hyperbolic free-particle trajectories. In this paper, we explore the physical implications of including the velocity-dependent Lorentz factor directly inside the mass coefficient of the Newtonian expression:</p>
             $$F = \frac{m_{0}}{\sqrt{1-\frac{v(t)^{2}}{c^{2}}}}\frac{dv(t)}{dt}$$
-            <p>Solving this differential relation under massive, perpendicular electrostatic Coulomb force fields yields a straightforward wave equation for particle velocity [5]:</p>
+            <p>Solving this differential relation under a massive, perpendicular electrostatic Coulomb force fields yields a straightforward wave equation for particle velocity:</p>
             $$v(t) = c \sin\left(\frac{Ft + k_1 m_0}{m_0 c}\right)$$
             <p>A Taylor series expansion of this expression reveals that classical Newtonian mechanics emerges cleanly as a low-energy limiting case ($v(t) \approx \frac{Ft}{m_0} = at$), while the high-frequency term highlights that wave-like behavior becomes manifest exclusively under intense sub-atomic force-to-mass fields.</p>
 
             <h2>3. The Mass-Energy Quadrature</h2>
-            <p>Integrating our velocity wave expression translates the cyclical coordinate runtime across the orbit into a bounded energy equation. By multiplying through by the inward electrostatic pulling force ($F$), we establish that the electron's classical kinetic <em>vis viva</em> energy ($m_e v^2$) stands in structural quadrature with its internal wave component ($hf$), bounding the system parameters along a right-angled Mass-Energy Triangle:</p>
+            <p>Integrating our velocity wave expression translates the cyclical coordinate runtime across the orbit into a bounded energy equation. By multiplying through by the fixed force $F$, we establish that the electron's classical kinetic <em>vis viva</em> energy ($m_e v^2$) stands in structural quadrature with its internal wave component ($hf$), bounding the system parameters along a right-angled Mass-Energy Triangle:</p>
             $$(m_e v^2)^2 + (hf)^2 = (m_e c^2)^2$$
             <p>Rearranging this Pythagorean relationship to isolate the radiant wave energy component yields:</p>
             $$hf = \sqrt{(m_e c^2)^2 - (m_e v^2)^2}$$
-            <p>Substituting the parameterized variables derived from an electron constrained at the reduced Compton radius ($v^2 = \alpha c^2$), the baseline ground state wave energy scales as $hf = m_e c^2 \sqrt{1 - \alpha^2}$ [2].</p>
+            <p>Substituting the parameterized variables derived from an electron constrained at the reduced Compton radius ($v^2 = \alpha c^2$), the baseline ground state wave energy scales as $hf = m_e c^2 \sqrt{1 - \alpha^2}$.</p>
 
             <h2>4. Quantization and Spectral Convergence</h2>
             <p>Extending this framework across higher energy states requires that the spatial dimensions scale according to the primary quantum boundary condition ($r_n = n\overline{\lambda}_e$). For an arbitrary shell $n$, the potential energy splits fluidly, expanding our relationship into the general Relativistic Rydberg formula:</p>
@@ -65,13 +65,12 @@
             <hr style="border: 0; border-top: 1px solid #ccc; margin: 40px 0;">
             
             <h2>Historical References &amp; Cross-Links</h2>
-            <p>For alternative math treatments and reference data regarding velocity expressions, see the notes below:</p>
+            <p>For alternative treatments and verified reference parameters, see the assets below:</p>
             <ul>
-                <li><strong><a href="prologue.html#conventional">AI Research Notes: Solutions to $F = m_{rel} \frac{dv}{dt}$</a></strong> – A side-by-side verification contrasting linear momentum derivatives against scalar variables [5].</li>
-                <li>[1] G. Herzberg. <em>Lamb shift of the 1s ground state of deuterium.</em> Jstor, 1956.</li>
-                <li>[2] T. W. Hänsch et al. <em>Precision measurement of the Rydberg constant by laser saturation spectroscopy.</em> Phys. Rev. Lett., 1974.</li>
-                <li>[3] A. Huber, T. W. Hänsch, et al. <em>Precision measurement of the 1s ground-state Lamb shift in atomic hydrogen.</em> Phys. Rev. A, 1995.</li>
-                <li>[4] NIST ASD Team. <em>Atomic Spectra Database (ver. 5.6.1).</em> National Institute of Standards and Technology, 2018.</li>
+                <li><strong><a href="prologue.html#conventional">AI Research Notes: Conventional Solutions to $F = m_{\text{rel}} \frac{dv}{dt}$</a></strong> – A side-by-side verification contrasting linear momentum derivatives against scalar variables.</li>
+                <li>G. Herzberg. <em>Lamb shift of the 1s ground state of deuterium.</em> Jstor, 1956.</li>
+                <li>T. W. Hänsch et al. <em>Precision measurement of the Rydberg constant by laser saturation spectroscopy of the Balmer alpha line.</em> Phys. Rev. Lett., 1974.</li>
+                <li>NIST ASD Team. <em>Atomic Spectra Database (ver. 5.6.1).</em> National Institute of Standards and Technology, 2018.</li>
             </ul>
         </article>
     </main>
