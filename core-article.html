@@ -1,302 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Relativistic Rydberg: A Heuristic Derivation</title>
+    
+    <!-- MathJax Script for Rendering LaTeX Equations on GitHub Pages -->
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        }
+      };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        h2, h3 { border-bottom: 1px solid #eaeaea; padding-bottom: 0.3em; }
+        table.tg { border-collapse: collapse; width: 100%; margin: 20px 0; }
+        table.tg th, table.tg td { border: 1px solid #ddd; padding: 8px 12px; text-align: left; }
+        table.tg th { background-color: #f6f8fa; }
+        .center-img { display: block; margin: 20px auto; max-width: 100%; height: auto; }
+    </style>
+</head>
+<body>
+
 <h3>Introduction</h3>
-In a number of previous articles, this author has made use of an equation for various atomic transition frequencies/energies pertaining to Hydrogen or 'hydrogen-like' atoms such as singly ionized Helium. It was shown that this equation is an off-shoot of the more general Dirac energy equation corresponding to the maximum possible energy of an electron in any particular energy level for which the primary quantum number is n. The equation does not depend on any of the other quantum numbers since, as it turns out, these simply cancel out under the maximum energy constraint.  Since the older Rydberg equation also does not take into account anything other than the primary quantum number, it seems appropriate to name this 'version' the "relativistic Rydberg" and it will certainly apply in any situation where the Rydberg equation has traditionally been employed. It will simply prove more accurate since it does take into account the relativistic nature of an electron bound to an atomic nucleus. There is in fact a direct mathematical relationship between the two: the 'traditional' Rydberg equation emerges from a one-term binomial expansion of the "relativistic Rydberg".
+<p>In a number of previous articles, this author has made use of an equation for various atomic transition frequencies/energies pertaining to Hydrogen or 'hydrogen-like' atoms such as singly ionized Helium. It was shown that this equation is an off-shoot of the more general Dirac energy equation corresponding to the maximum possible energy of an electron in any particular energy level for which the primary quantum number is $n$. The equation does not depend on any of the other quantum numbers since, as it turns out, these simply cancel out under the maximum energy constraint. Since the older Rydberg equation also does not take into account anything other than the primary quantum number, it seems appropriate to name this 'version' the "relativistic Rydberg" and it will certainly apply in any situation where the Rydberg equation has traditionally been employed. It will simply prove more accurate since it does take into account the relativistic nature of an electron bound to an atomic nucleus. There is in fact a direct mathematical relationship between the two: the 'traditional' Rydberg equation emerges from a one-term binomial expansion of the "relativistic Rydberg".</p>
 
-In this article, we present a heuristic method for the derivation of the "relativistic Rydberg". At the time this was developed, the author was not aware of the Dirac equation and only discovered the above correspondence at a much later date. This was due to the predictions of the equation proving remarkably similar to those of the Dirac equation to the point where the author was convinced the two had to coincide in some manner and duly discovered they were, in fact, the same given the particular constraint mentioned above.
+<p>In this article, we present a heuristic method for the derivation of the "relativistic Rydberg". At the time this was developed, the author was not aware of the Dirac equation and only discovered the above correspondence at a much later date. This was due to the predictions of the equation proving remarkably similar to those of the Dirac equation to the point where the author was convinced the two had to coincide in some manner and duly discovered they were, in fact, the same given the particular constraint mentioned above.</p>
+
 <h3>Newton's Second Law</h3>
-Force = Change of Momentum with Change of Time (we use the definition stated on the <a href="http://www.grc.nasa.gov/WWW/k-12/airplane/newton2.html"> Nasa Website</a>). Mathematically the Second Law takes on various forms depending on circumstance:
+<p>Force = Change of Momentum with Change of Time (we use the definition stated on the <a href="http://www.grc.nasa.gov/WWW/k-12/airplane/newton2.html">Nasa Website</a>). Mathematically the Second Law takes on various forms depending on circumstance:</p>
 
-$$ F=\frac{mv_f-mv_i}{t_f-t_i} $$ where the subscripts indicate 'final' and 'initial' values of the parameters, or
-$$ F=m\frac{dv}{dt}=ma $$ (this assumes constant mass) or
-$$ F=\frac{d(mv)}{dt}=\frac{dp}{dt} $$ (p represents momentum).
+$$ F=\frac{mv_f-mv_i}{t_f-t_i} $$ 
+<p>where the subscripts indicate 'final' and 'initial' values of the parameters, or</p>
+$$ F=m\frac{dv}{dt}=ma $$ 
+<p>(this assumes constant mass) or</p>
+$$ F=\frac{d(mv)}{dt}=\frac{dp}{dt} $$ 
+<p>($p$ represents momentum).</p>
 
-One should bear in mind that force, velocity, acceleration and momentum are all vector quantities so technically all the above are vector equations. In the discussion which follows we will try to keep things simple by assuming all the vectors are in the same direction.
+<p>One should bear in mind that force, velocity, acceleration and momentum are all vector quantities so technically all the above are vector equations. In the discussion which follows we will try to keep things simple by assuming all the vectors are in the same direction.</p>
+
 <h3>Variable Mass and Newton's Second Law</h3>
-According to Einstein's formula, mass varies with velocity according to the equation:
+<p>According to Einstein's formula, mass varies with velocity according to the equation:</p>
 
-$$m = {m_0\over \sqrt{1-\displaystyle{v^2\over c^2}}}.$$
+$$m = \frac{m_0}{\sqrt{1-\frac{v^2}{c^2}}}.$$
 
-So we pose the question what if - in the second of the Newton II equations above - we include the relativistic <a href="https://en.wikipedia.org/wiki/Lorentz_factor">Lorentz factor</a> which is a function of the object's velocity?
+<p>So we pose the question what if - in the second of the Newton II equations above - we include the relativistic <a href="https://en.wikipedia.org/wiki/Lorentz_factor">Lorentz factor</a> which is a function of the object's velocity?</p>
 
-$$F = {m_0\over \sqrt{1-\displaystyle{v(t)^2\over c^2}}}\frac{dv(t)}{dt} .$$
+$$F = \frac{m_0}{\sqrt{1-\frac{v(t)^2}{c^2}}}\frac{dv(t)}{dt}.$$
 
-This looks somewhat complex so let's try feeding the equation to a 'math engine' namely <a href="http://www.wolframalpha.com/input/?i=F%3Dm%2Fsqrt%281-%28v%28t%29%29^2%2Fc^2%29*dv%2Fdt"> Wolfram Alpha</a>. The somewhat remarkable result is that the above has a mathematically straightforward solution for v(t) in the form of a wave equation!
+<p>This looks somewhat complex so let's try feeding the equation to a 'math engine' namely <a href="http://www.wolframalpha.com/input/?i=F%3Dm%2Fsqrt%281-%28v%28t%29%29^2%2Fc^2%29*dv%2Fdt">Wolfram Alpha</a>. The somewhat remarkable result is that the above has a mathematically straightforward solution for $v(t)$ in the form of a wave equation!</p>
 
-$$ v(t) = c.sin\left (\frac{Ft+k_1m_0}{m_0c} \right).$$
+$$ v(t) = c \sin\left(\frac{Ft+k_1m_0}{m_0c}\right).$$
 
-Now we wonder does this somewhat bizarre result make any physical sense? What it seems to be saying is that if a mass is accelerated very rapidly towards the speed of light, it will experience some form of wave motion. But isn't that exactly what Modern Physics is telling us - namely that associated with an object having momentum p, we have the <a href="http://en.wikipedia.org/wiki/Matter_wave"> De Broglie wavelength</a>:
+<p>Now we wonder does this somewhat bizarre result make any physical sense? What it seems to be saying is that if a mass is accelerated very rapidly towards the speed of light, it will experience some form of wave motion. But isn't that exactly what Modern Physics is telling us - namely that associated with an object having momentum $p$, we have the <a href="http://en.wikipedia.org/wiki/Matter_wave">De Broglie wavelength</a>:</p>
 
 $$\lambda = \frac{h}{p}.$$
 
-So perhaps we should not be surprised to find that a very rapidly accelerated particle behaves as if it were a wave.
+<p>So perhaps we should not be surprised to find that a very rapidly accelerated particle behaves as if it were a wave.</p>
+
 <h3>Expansion of the wave equation</h3>
-Of some interest is the Taylor Series expansion of the v(t) wave equation. Once again we call upon "the Oracle" namely Wolfram Alpha to effect <a href="http://www.wolframalpha.com/input/?i=Expand+c*sin%28F*t%2F%28m*c%29%29"> the expansion</a> (leaving out the constant of integration) and are perhaps somewhat 'underwhelmed' to find that - discarding third order and higher terms - we obtain:
+<p>Of some interest is the Taylor Series expansion of the $v(t)$ wave equation. Once again we call upon "the Oracle" namely Wolfram Alpha to effect <a href="http://www.wolframalpha.com/input/?i=Expand+c*sin%28F*t%2F%28m*c%29%29">the expansion</a> (leaving out the constant of integration) and are perhaps somewhat 'underwhelmed' to find that - discarding third order and higher terms - we obtain:</p>
 
-$$v(t) \approx \frac{Ft}{m_0} = at $$ as per conventional equations of motion.
+$$v(t) \approx \frac{Ft}{m_0} = at$$ 
+<p>as per conventional equations of motion.</p>
 
-Nonetheless, it is encouraging to note that the small-angle approximation of the wave equation has a familiar form.
+<p>Nonetheless, it is encouraging to note that the small-angle approximation of the wave equation has a familiar form.</p>
 
-Note that the frequency of the wave equation has c (velocity of light) in the denominator and therefore it is clear that such wave behaviour will only manifest if the F/m ratio is extremely high.
+<p>Note that the frequency of the wave equation has $c$ (velocity of light) in the denominator and therefore it is clear that such wave behaviour will only manifest if the $F/m$ ratio is extremely high.</p>
 
-$$ f= \frac{\omega}{2 \pi}= \frac{ F}{2 \pi m_0 c}. $$
+$$ f= \frac{\omega}{2 \pi}= \frac{F}{2 \pi m_0 c}. $$
+
 <h3>Integration of the wave equation</h3>
-An obvious next step is to integrate the v(t) wave equation to obtain an expression for displacement x(t):
+<p>An obvious next step is to integrate the $v(t)$ wave equation to obtain an expression for displacement $x(t)$:</p>
 
-$$x(t)= \int c.sin\left ( \frac{Ft}{m_0c} \right )dt=\frac {-m_0c^2}{F}cos\left ( \frac{Ft}{m_0c} \right ) + constant.$$
+$$x(t)= \int c \sin\left(\frac{Ft}{m_0c}\right) dt = \frac{-m_0c^2}{F} \cos\left(\frac{Ft}{m_0c}\right) + \text{constant}.$$
 
-It's clear that mathematically we had expected another wave equation for x(t) but how are we to interpret an equation which presents us with some form of 'bounded motion' ? Noting that ##mc^2## appears in the numerator and F in the denominator, it seems sensible to multiply through by the fixed force F to obtain instead a 'bounded energy' equation. The maximum value thereof is none other than Einstein's iconic ##E=mc^2:##
+<p>It's clear that mathematically we had expected another wave equation for $x(t)$ but how are we to interpret an equation which presents us with some form of 'bounded motion'? Noting that $mc^2$ appears in the numerator and $F$ in the denominator, it seems sensible to multiply through by the fixed force $F$ to obtain instead a 'bounded energy' equation. The maximum value thereof is none other than Einstein's iconic $E=mc^2$:</p>
 
-$$ F.x(t) = -m_0c^2\cos \left (\frac{Ft}{m_0c} \right ).$$
+$$ F \cdot x(t) = -m_0c^2 \cos\left(\frac{Ft}{m_0c}\right). $$
 
-Once again it is useful to obtain a small angle approximation for the above energy expression:
+<p>Once again it is useful to obtain a small angle approximation for the above energy expression:</p>
 
-$$ F.x(t) \approx -m_0c^2 + \frac{m_0}{2}\left ( \frac{Ft}{m_0} \right )^2 \approx -m_0c^2+ \frac{m_0.v(t)^2}{2}.$$
+$$ F \cdot x(t) \approx -m_0c^2 + \frac{m_0}{2}\left(\frac{Ft}{m_0}\right)^2 \approx -m_0c^2 + \frac{m_0 v(t)^2}{2}. $$
 
-We are using the previously obtained small angle approximation for v(t) as ##\frac{Ft}{m}.## It is not clear quite how we should interpret the signs of the two terms in the above expression but it seems that ##mc^2##  is the maximum possible energy of a particle having mass m from which kinetic energy ##½mv^2## is <em>deducted</em> since the signs of the respective terms are opposite. But once again we are finding a familiar quantity - namely kinetic energy - emerging from the wave equation.
+<p>We are using the previously obtained small angle approximation for $v(t)$ as $\frac{Ft}{m}$. It is not clear quite how we should interpret the signs of the two terms in the above expression but it seems that $mc^2$ is the maximum possible energy of a particle having mass $m$ from which kinetic energy $\frac{1}{2}mv^2$ is <em>deducted</em> since the signs of the respective terms are opposite. But once again we are finding a familiar quantity - namely kinetic energy - emerging from the wave equation.</p>
 
-Energy however cannot 'oscillate' - it must rather change from one form to another just as in a pendulum there is a constant transfer of energy between potential and kinetic form. So we must presume that corresponding to the oscillatory cosine above, there is an oscillatory sine such that:
+<p>Energy however cannot 'oscillate' - it must rather change from one form to another just as in a pendulum there is a constant transfer of energy between potential and kinetic form. So we must presume that corresponding to the oscillatory cosine above, there is an oscillatory sine such that:</p>
 
-$$ m_0c^2 = m_0c^2\left[cos^2 \left (\frac{Ft}{m_0c} \right )+sin^2 \left (\frac{Ft}{m_0c} \right )\right]^{1/2}.$$
+$$ m_0c^2 = m_0c^2\left[\cos^2\left(\frac{Ft}{m_0c}\right) + \sin^2\left(\frac{Ft}{m_0c}\right)\right]^{1/2}. $$
 
-We conjecture that the cosine expression above represents one form of energy which we might term 'conventional' whilst the sine is radiant or wave energy. And that the 'oscillation' represents a continual changing from one form to the other.  Possibly it relates to the "zitterbewegung" motion associated with the Dirac equation as described in <a href="https://www.nature.com/articles/nphys132">this article</a> from Nature Reviews.  We are dealing with a phenomenon that falls from the Maths and does not really have a clear physical interpretation.
+<p>We conjecture that the cosine expression above represents one form of energy which we might term 'conventional' whilst the sine is radiant or wave energy. And that the 'oscillation' represents a continual changing from one form to the other. Possibly it relates to the "zitterbewegung" motion associated with the Dirac equation as described in <a href="https://www.nature.com/articles/nphys132">this article</a> from Nature Reviews. We are dealing with a phenomenon that falls from the Maths and does not really have a clear physical interpretation.</p>
+
 <h3>Complex Energy Equation</h3>
-Alternatively, we could propose a complex energy equation having the following form:
+<p>Alternatively, we could propose a complex energy equation having the following form:</p>
 
-$$E=m_0c^2e^{\left(\frac{iFt}{m_0c}\right)}.$$
+$$E=m_0c^2 e^{\left(\frac{iFt}{m_0c}\right)}.$$
 
-The interesting aspect of this equation is its Taylor Series expansion which we can obtain from Wolfram Alpha by entering "<em>expand m*c^2*exp(i*(F*t)/(m*c))</em>" on the command line. The result is displayed below:
+<p>The interesting aspect of this equation is its Taylor Series expansion which we can obtain from Wolfram Alpha by entering "<em>expand m*c^2*exp(i*(F*t)/(m*c))</em>" on the command line. The result is displayed below:</p>
 
-<img class="alignnone size-full wp-image-36352 aligncenter" src="https://www.physicsforums.com/insights/wp-content/uploads/2021/01/Wave-equation-expanded.png" alt="" width="491" height="305" />
+<img class="center-img" src="https://www.physicsforums.com/insights/wp-content/uploads/2021/01/Wave-equation-expanded.png" alt="Wave equation expanded" width="491" height="305" />
 
-Discarding third order and higher terms and noting that the product "Ft" has dimensions of momentum (p), we have a term ##mc^2## representing rest mass energy followed by an imaginary term of the form ##pc## (photon/wave energy)  and then a term of the form ##\frac{p^2}{2m} ## (kinetic energy). The above equation stemmed from <a href="https://www.physicsforums.com/threads/newtons-second-law-relativistic.765880/"><strong>this discussion</strong></a> on Physics forums.
+<p>Discarding third order and higher terms and noting that the product "$Ft$" has dimensions of momentum ($p$), we have a term $mc^2$ representing rest mass energy followed by an imaginary term of the form $pc$ (photon/wave energy) and then a term of the form $\frac{p^2}{2m}$. The above equation stemmed from <a href="https://www.physicsforums.com/threads/newtons-second-law-relativistic/"><strong>this discussion</strong></a> on Physics forums.</p>
+
 <h3>The Hydrogen Atom: Bohr Model</h3>
-We next search for a possible physical situation where the above wave equation could apply. A 'candidate mass' would most likely be extremely small and subject to a relatively massive constant force such that the ratio F/m is large. We consider one such situation - an electron in Hydrogen's 1s orbital. One needs to have some appreciation in this instance of just how massive the electrostatic force (between electron and nucleus) is relative to electron mass so we begin with a summary of the Bohr model.
+<p>We next search for a possible physical situation where the above wave equation could apply. A 'candidate mass' would most likely be extremely small and subject to a relatively massive constant force such that the ratio $F/m$ is large. We consider one such situation - an electron in Hydrogen's 1s orbital. One needs to have some appreciation in this instance of just how massive the electrostatic force (between electron and nucleus) is relative to electron mass so we begin with a summary of the Bohr model.</p>
 
-The first equation Bohr drew up is based on the electrostatic force on an 'orbiting' electron  giving rise to a centripetal force:
+<p>The first equation Bohr drew up is based on the electrostatic force on an 'orbiting' electron giving rise to a centripetal force:</p>
 
-$$ \frac{m_ev^2}{r}=\frac {kq^2}{r^2} .$$
+$$ \frac{m_ev^2}{r}=\frac{kq^2}{r^2}. $$
 
-He next assumed that an 'orbiting' electron with De Broglie wavelength h/p would form a standing wave. Thus:
+<p>He next assumed that an 'orbiting' electron with De Broglie wavelength $h/p$ would form a standing wave. Thus:</p>
 
-$$ 2 \pi r = n \lambda = \frac {nh}{m_ev}. $$
+$$ 2 \pi r = n \lambda = \frac{nh}{m_ev}. $$
 
-We request Wolfram Alpha to <a href="http://www.wolframalpha.com/input/?i=solve+for+r%2Cv%3A+m*v^2%2Fr%3Dk*q^2%2Fr^2+%3B+2*pi*r%3Dn*h%2F%28m*v%29"> solve simultaneously for r and v</a> obtaining:
+<p>We request Wolfram Alpha to <a href="http://www.wolframalpha.com/input/?i=solve+for+r%2Cv%3A+m*v^2%2Fr%3Dk*q^2%2Fr^2+%3B+2*pi*r%3Dn*h%2F%28m*v%29">solve simultaneously for $r$ and $v$</a> obtaining:</p>
 
-$$r=a_0=\frac{h^2n^2}{4\pi^2m_e k q^2}=5.29177\times 10^{-11}m.$$
+$$r=a_0=\frac{h^2n^2}{4\pi^2m_e k q^2}=5.29177\times 10^{-11}\text{ m}.$$
 
-Introducing the symbol ##\bar{\lambda}_e## for the <a href="http://en.wikipedia.org/wiki/Compton_wavelength#Reduced_Compton_wavelength"> reduced Compton wavelength</a> (of the electron), the Bohr radius ##a_0## may be written as ##\frac {\bar{\lambda}_e}{\alpha}, ##where ##\alpha## is the fine structure constant .
+<p>Introducing the symbol $\bar{\lambda}_e$ for the <a href="http://en.wikipedia.org/wiki/Compton_wavelength#Reduced_Compton_wavelength">reduced Compton wavelength</a> (of the electron), the Bohr radius $a_0$ may be written as $\frac{\bar{\lambda}_e}{\alpha}$, where $\alpha$ is the fine structure constant.</p>
 
-$$v=\frac {2\pi k q^2}{hn}=\alpha c = 2.187691\times10^{6} ms^{-1}.$$
+$$v=\frac{2\pi k q^2}{hn}=\alpha c = 2.187691\times10^{6}\text{ m/s}.$$
 
-The Bohr model formulae were subsequently replaced/enhanced with the more sophisticated Schrodinger wave equation and later the fully relativistic Dirac energy equation. Nonetheless we may still reasonably  use the above to provide some idea of the F/m ratio for the electron in the Hydrogen 1s orbital:
+<p>The Bohr model formulae were subsequently replaced/enhanced with the more sophisticated Schrodinger wave equation and later the fully relativistic Dirac energy equation. Nonetheless we may still reasonably use the above to provide some idea of the $F/m$ ratio for the electron in the Hydrogen 1s orbital:</p>
 
-$$\frac{F}{m_e}=\frac {kq^2}{r^2m_e}=9.04422\times10^{22} ms^{-2} .$$
+$$\frac{F}{m_e}=\frac{kq^2}{r^2m_e}=9.04422\times10^{22}\text{ m/s}^2.$$
 
-Verify this calculation <a href="http://www.wolframalpha.com/input/?i=%28coulomb+constant%29*%28electron+charge%29%5E2*%28electron+mass%29%5E-1*%28%28Compton+wavelength%29%2F%28%28fine+structure+constant%29*2*pi%29%29%5E-2"> here</a>.
+<p>Verify this calculation <a href="http://www.wolframalpha.com/input/?i=%28coulomb+constant%29*%28electron+charge%29%5E2*%28electron+mass%29%5E-1*%28%28Compton+wavelength%29%2F%28%28fine+structure+constant%29*2*pi%29%29%5E-2">here</a>.</p>
 
-An acceleration of this magnitude cannot be sustained since the speed of light would be exceeded within a very small fraction of a second.  So it is not unreasonable to suppose that it will instead result in the electron exhibiting the oscillatory behaviour predicted by the v(t) wave equation referred to above. The motion is perpendicular to the conventional "orbit" and "r" in the equations above will therefore change. We presume minimally so such that the electrostatic force on the electron remains (effectively) constant.
+<p>An acceleration of this magnitude cannot be sustained since the speed of light would be exceeded within a very small fraction of a second. So it is not unreasonable to suppose that it will instead result in the electron exhibiting the oscillatory behaviour predicted by the $v(t)$ wave equation referred to above. The motion is perpendicular to the conventional "orbit" and "$r$" in the equations above will therefore change. We presume minimally so such that the electrostatic force on the electron remains (effectively) constant.</p>
+
 <h3>The Hydrogen Atom: Oscillatory Model</h3>
-As in the Bohr model, our first equation assumes the normal equation for an orbiting mass:
-$$ \frac{m_e v^2}{r}=\frac {kq^2}{r^2} $$
+<p>As in the Bohr model, our first equation assumes the normal equation for an orbiting mass:</p>
+$$ \frac{m_e v^2}{r}=\frac{kq^2}{r^2} $$
 
-But for the second equation - in keeping with the predicted oscillatory behaviour of the electron - we will deploy the standard wave equation ##v = f\lambda## with the wavelength being the electron's De Broglie wavelength h/mv and the frequency being that predicted by the v(t) wave equation determined previously. Notwithstanding the above interpretation of these as energy oscillations, we assume that - as the electrostatic force acts perpendicular to the direction of motion of the electron - we are dealing with some form of a transverse wave.
+<p>But for the second equation - in keeping with the predicted oscillatory behaviour of the electron - we will deploy the standard wave equation $v = f\lambda$ with the wavelength being the electron's De Broglie wavelength $h/mv$ and the frequency being that predicted by the $v(t)$ wave equation determined previously. Notwithstanding the above interpretation of these as energy oscillations, we assume that - as the electrostatic force acts perpendicular to the direction of motion of the electron - we are dealing with some form of a transverse wave.</p>
 
-$$v=f \lambda = \frac{kq^2}{2 \pi r^2 m_e c} \times \frac{h}{m_e v}. $$
+$$v=f \lambda = \frac{kq^2}{2 \pi r^2 m_e c} \times \frac{h}{m_e v}.$$
 
-Probably one has to take a "leap of faith" to justify the marriage of a "particle" equation ##\frac{mv^2}{r}= \frac{kq^2}{r^2}## with a wave equation ##v = f\lambda##. But after all isn't that precisely what Bohr himself did ?!
+<p>Probably one has to take a "leap of faith" to justify the marriage of a "particle" equation $\frac{mv^2}{r}= \frac{kq^2}{r^2}$ with a wave equation $v = f\lambda$. But after all isn't that precisely what Bohr himself did?!</p>
 
-As was done for the Bohr model, we submit these two equations to Wolfram Alpha to <a href="http://www.wolframalpha.com/input/?i=Solve+for+v%2Cr%3A+mv%5E2%2Fr%3Dkq%5E2%2Fr%5E2%2C+v+%3D+h%2F%28mv%29*k*q%5E2%2F%28r%5E2*2*pi*m*c%29"> solve simultaneously for r and v</a> obtaining:
+<p>As was done for the Bohr model, we submit these two equations to Wolfram Alpha to <a href="http://www.wolframalpha.com/input/?i=Solve+for+v%2Cr%3A+mv%5E2%2Fr%3Dkq%5E2%2Fr%5E2%2C+v+%3D+h%2F%28mv%29*k*q%5E2%2F%28r%5E2*2*pi*m*c%29">solve simultaneously for $r$ and $v$</a> obtaining:</p>
 
-$$r=\frac{h}{2 \pi m_e c}=3.861593\times 10^{-13}m$$ and $$v=\sqrt{\frac{2 \pi k q^2}{h c}} \times c=\sqrt{\alpha}c=2.56096338 \times 10^{7}ms^{-1}.$$
+$$r=\frac{h}{2 \pi m_e c}=3.861593\times 10^{-13}\text{ m}$$ 
+<p>and</p>
+$$v=\sqrt{\frac{2 \pi k q^2}{h c}} \times c=\sqrt{\alpha}c=2.56096338 \times 10^{7}\text{ m/s}.$$
 
-The very interesting result which arises is that r turns out to be the <a href="http://en.wikipedia.org/wiki/Compton_wavelength#Reduced_Compton_wavelength"> reduced Compton wavelength</a> for an electron. The 'electron wave' thus occupies an orbital circumference of length equal to the Compton wavelength ##\frac{h}{mc}##. <a href="#footnote-1">[1]</a>
+<p>The very interesting result which arises is that $r$ turns out to be the <a href="http://en.wikipedia.org/wiki/Compton_wavelength#Reduced_Compton_wavelength">reduced Compton wavelength</a> for an electron. The 'electron wave' thus occupies an orbital circumference of length equal to the Compton wavelength $\frac{h}{mc}$ <a href="#footnote-1">[1]</a>.</p>
 
-We can also determine the "zitterbewegung" (we use this word for want of  anything better) frequency now that we have solved for r: $$f=\frac{F}{2 \pi m_e c}=\frac{k q^2}{2 \pi r^2 m_e c}.$$ Substituting ##r=\frac{h}{2 \pi m_e c}##, we obtain $$f=\frac{2 \pi k q^2 m_e c}{h^2}.$$ At this point we multiply numerator and denominator by c and split the fraction as follows: $$ f= \frac{2 \pi k q^2}{h c} \times \frac{m_e c^2}{h}. $$ In words the result obtained is the product of fine structure constant and the electron's Compton frequency. Since both of these are know to Wolfram Alpha, we can quickly obtain a numeric value:
+<p>We can also determine the "zitterbewegung" frequency now that we have solved for $r$:</p> 
+$$f=\frac{F}{2 \pi m_e c}=\frac{k q^2}{2 \pi r^2 m_e c}.$$ 
+<p>Substituting $r=\frac{h}{2 \pi m_e c}$, we obtain</p> 
+$$f=\frac{2 \pi k q^2 m_e c}{h^2}.$$ 
+<p>At this point we multiply numerator and denominator by $c$ and split the fraction as follows:</p> 
+$$f= \frac{2 \pi k q^2}{h c} \times \frac{m_e c^2}{h}.$$ 
+<p>In words the result obtained is the product of fine structure constant and the electron's Compton frequency. Since both of these are known to Wolfram Alpha, we can quickly obtain a numeric value:</p>
 
-<img class="alignnone size-full wp-image-36397 aligncenter" src="https://www.physicsforums.com/insights/wp-content/uploads/2021/01/Zitterbewegung-frequency.png" alt="" width="640" height="242" />
+<img class="center-img" src="https://www.physicsforums.com/insights/wp-content/uploads/2021/01/Zitterbewegung-frequency.png" alt="Zitterbewegung frequency" width="640" height="242" />
 
-We can further calculate the electron's De Broglie wavelength based on the determination of  electron velocity as ##\sqrt{\alpha}c##:  $$\lambda_{dB}=\frac{h}{m_e\sqrt{\alpha}c}.$$ In words this is the electron's Compton wavelength divided by the square root of fine structure constant:
+<p>We can further calculate the electron's De Broglie wavelength based on the determination of electron velocity as $\sqrt{\alpha}c$:</p> 
+$$\lambda_{dB}=\frac{h}{m_e\sqrt{\alpha}c}.$$ 
+<p>In words this is the electron's Compton wavelength divided by the square root of fine structure constant:</p>
 
-<img class="alignnone size-full wp-image-36506" src="https://www.physicsforums.com/insights/wp-content/uploads/2021/01/Electron-de-Broglie-wavelength.png" alt="" width="640" height="267" />
+<img class="center-img" src="https://www.physicsforums.com/insights/wp-content/uploads/2021/01/Electron-de-Broglie-wavelength.png" alt="Electron de Broglie wavelength" width="640" height="267" />
 
-Noting that this is several times the Compton wavelength we are led to believe that the electron follows some kind of spiral/helical path with the Compton wavelength threading through the centre thereof.  But once again we are (in truth) at a loss for words to describe what is happening in a meaningful way. Small wonder that quantum theory decries even the use of such terms as 'radius' and 'velocity' in this context!
+<p>Noting that this is several times the Compton wavelength we are led to believe that the electron follows some kind of spiral/helical path with the Compton wavelength threading through the centre thereof. But once again we are (in truth) at a loss for words to describe what is happening in a meaningful way. Small wonder that quantum theory decries even the use of such terms as 'radius' and 'velocity' in this context!</p>
+
 <h3>Comparison between the Bohr model and Oscillatory model</h3>
-&nbsp;
 <table class="tg">
 <thead>
 <tr>
-<th class="tg-0pky">Parameter</th>
-<th class="tg-0pky">Bohr model</th>
-<th class="tg-0pky">Numeric</th>
-<th class="tg-0pky">Oscillatory Model</th>
-<th class="tg-0pky">Numeric</th>
+<th>Parameter</th>
+<th>Bohr model</th>
+<th>Numeric</th>
+<th>Oscillatory Model</th>
+<th>Numeric</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tg-0pky">Radius</td>
-<td class="tg-0pky">##a_0=\frac {\bar{\lambda}_e}{\alpha} ##</td>
-<td class="tg-0pky">## 5.29177\times 10^{-11} \text{ m} ##</td>
-<td class="tg-0pky">##a_0=\bar{\lambda}_e ##</td>
-<td class="tg-0pky">##3.861593\times 10^{-13}m ##</td>
+<td>Radius</td>
+<td>$a_0=\frac{\bar{\lambda}_e}{\alpha}$</td>
+<td>$5.29177\times 10^{-11}\text{ m}$</td>
+<td>$a_0=\bar{\lambda}_e$</td>
+<td>$3.861593\times 10^{-13}\text{ m}$</td>
 </tr>
 <tr>
-<td class="tg-0pky">Velocity</td>
-<td class="tg-0pky">##\alpha c##</td>
-<td class="tg-0pky">## 2.187691\times10^{6} \text{ m/s} ##</td>
-<td class="tg-0pky">##\sqrt{\alpha}c##</td>
-<td class="tg-0pky">##2.56096338 \times 10^{7}ms^{-1}  ##</td>
+<td>Velocity</td>
+<td>$\alpha c$</td>
+<td>$2.187691\times10^{6}\text{ m/s}$</td>
+<td>$\sqrt{\alpha}c$</td>
+<td>$2.56096338 \times 10^{7}\text{ m/s}$</td>
 </tr>
 <tr>
-<td class="tg-0pky">F:m ratio</td>
-<td class="tg-0pky">##\frac{\alpha^3 c^2}{\bar\lambda_e}##</td>
-<td class="tg-0pky">## 9.04422 \times 10^{22}\text{ m}s^{-2} ##</td>
-<td class="tg-0pky">##\frac{\alpha c^2}{\bar\lambda_e}##</td>
-<td class="tg-0pky">## 1.69840114 \times 10^{27}ms^{-2} ##</td>
+<td>$F:m$ ratio</td>
+<td>$\frac{\alpha^3 c^2}{\bar\lambda_e}$</td>
+<td>$9.04422 \times 10^{22}\text{ m/s}^2$</td>
+<td>$\frac{\alpha c^2}{\bar\lambda_e}$</td>
+<td>$1.69840114 \times 10^{27}\text{ m/s}^2$</td>
 </tr>
 </tbody>
 </table>
-<h3></h3>
+
 <h3>'Vis Viva' and Wave Energy of the Hydrogen 1s electron</h3>
-Returning now to the equation:
+<p>Returning now to the equation:</p>
 
-$$ \frac{m_e v^2}{r}=\frac {kq^2}{r^2}, $$
+$$ \frac{m_e v^2}{r}=\frac{kq^2}{r^2}, $$
 
-we note that if we multiply through by r on both sides we obtain:
+<p>we note that if we multiply through by $r$ on both sides we obtain:</p>
 
-$$ {m_e v^2} = \frac {kq^2}{r}.$$
+$$ {m_e v^2} = \frac{kq^2}{r}. $$
 
-This is clearly an energy equation - the left-hand side is a quantity known as the <a href="http://en.wikipedia.org/wiki/Vis_viva">vis-viva</a> energy and the right-hand side is the electron's potential energy.  Picking up on our earlier determination of oscillating energy with a bounded maximum ##E=mc^2##, we surmise that the electron's 'vis viva'  energy is in quadrature with another form of energy which we will call the electron's 'wave energy' - that is it satisfies the following Pythagorean relationship:
+<p>This is clearly an energy equation - the left-hand side is a quantity known as the <a href="http://en.wikipedia.org/wiki/Vis_viva">vis-viva</a> energy and the right-hand side is the electron's potential energy. Picking up on our earlier determination of oscillating energy with a bounded maximum $E=mc^2$, we surmise that the electron's 'vis viva' energy is in quadrature with another form of energy which we will call the electron's 'wave energy' - that is it satisfies the following Pythagorean relationship:</p>
 
-$$ \left(m_ev^2\right)^2+\left(hf\right)^2 = (m_e c^2)^2.$$
+$$ \left(m_ev^2\right)^2+\left(hf\right)^2 = (m_e c^2)^2. $$
 
-<img class="alignnone size-full wp-image-36384" src="https://www.physicsforums.com/insights/wp-content/uploads/2021/01/Mass-Energy-Triangle.png" alt="" width="640" height="457" />
+<img class="center-img" src="https://www.physicsforums.com/insights/wp-content/uploads/2021/01/Mass-Energy-Triangle.png" alt="Mass Energy Triangle" width="640" height="457" />
 
-The above equation may be re-arranged to obtain an expression for wave energy.
+<p>The above equation may be re-arranged to obtain an expression for wave energy.</p>
 
-$$ hf = \sqrt{\left (m_e c^2\right)^2 - \left(m_ev^2\right)^2}.$$
+$$ hf = \sqrt{\left(m_e c^2\right)^2 - \left(m_ev^2\right)^2}. $$
 
-Substituting ##v^2=\alpha c^2##  - as determined earlier in our derivation of parameters for the oscillatory model  - we obtain:
+<p>Substituting $v^2=\alpha c^2$ - as determined earlier in our derivation of parameters for the oscillatory model - we obtain:</p>
 
 $$ hf = m_e c^2 \sqrt{1 - \alpha^2}. $$
-<h3>Hydrogen ##1s-2p_{3/2}##  Transition Energy</h3>
-Whilst we cannot imagine exactly the shape and form of a 'standing wave' in respect of the electron's 'zitterbewegung' motion, we presume that - however it works -it is accommodated within the framework of the Compton radius or 'reduced Compton wavelength'. That is to say, the motion's parameters  are quantized according to the following simple relationship:
 
-$$r_n=n\bar{\lambda}_e.$$
+<h3>Hydrogen $1s-2p_{3/2}$ Transition Energy</h3>
+<p>Whilst we cannot imagine exactly the shape and form of a 'standing wave' in respect of the electron's 'zitterbewegung' motion, we presume that - however it works - it is accommodated within the framework of the Compton radius or 'reduced Compton wavelength'. That is to say, the motion's parameters are quantized according to the following simple relationship:</p>
 
-Considering the case where n=2, the radius has doubled and therefore the electron's potential energy or 'vis viva' has halved. The expression for wave energy in the highest energy level permissible when primary quantum number n=2 is thus:
+$$ r_n = n\bar{\lambda}_e. $$
 
-$$ hf_2 = m_e c^2 \sqrt{1 - \left(\frac{\alpha}{2}\right)^2}= m_e c^2 \sqrt{1 - \frac{\alpha^2}{4}} ,$$
+<p>Considering the case where $n=2$, the radius has doubled and therefore the electron's potential energy or 'vis viva' has halved. The expression for wave energy in the highest energy level permissible when primary quantum number $n=2$ is thus:</p>
 
-and in general:
+$$ hf_2 = m_e c^2 \sqrt{1 - \left(\frac{\alpha}{2}\right)^2}= m_e c^2 \sqrt{1 - \frac{\alpha^2}{4}}, $$
+
+<p>and in general:</p>
 
 $$ hf_n = m_e c^2 \sqrt{1 - \left(\frac{\alpha}{n}\right)^2}= m_e c^2 \sqrt{1 - \frac{\alpha^2}{n^2}}. $$
 
-In particular if  ##n=\infty##, ##hf_{\infty}=m_ec^2## and we can immediately obtain a very accurate value of Hydrogen's ionization energy using the formula $$E_{\infty}-E_1=m_e c^2(1- \sqrt{1 - \alpha^2}) $$ as we have detailed in <a href="https://www.physicsforums.com/insights/ionization-energy-of-atomic-hydrogen/">an earlier article</a>.
+<p>In particular if $n=\infty$, $hf_{\infty}=m_ec^2$ and we can immediately obtain a very accurate value of Hydrogen's ionization energy using the formula $E_{\infty}-E_1=m_e c^2(1- \sqrt{1 - \alpha^2})$ as we have detailed in <a href="https://www.physicsforums.com/insights/ionization-energy-of-atomic-hydrogen/">an earlier article</a>.</p>
 
-We are now in a position to determine the difference in wave energy (ie photon transition energy) between the Hydrogen 1s and ##2p_{3/2}## energy levels (the reason we indicate ##2p_{3/2}## rather than (say) 2s will become apparent in the later discussion of the Dirac energy equation).
+<p>We are now in a position to determine the difference in wave energy (i.e. photon transition energy) between the Hydrogen $1s$ and $2p_{3/2}$ energy levels (the reason we indicate $2p_{3/2}$ rather than (say) 2s will become apparent in the later discussion of the Dirac energy equation).</p>
 
 $$ hf_2-hf_1 = m_e c^2 \left[\sqrt{1 - \frac{\alpha^2}{4}}-\sqrt{1-\alpha^2}\right]. $$
 
-This is a calculation we shall entrust once more to <a href="http://www.wolframalpha.com/input/?i=%28mass+of+electron%29*%28mass+of+proton%29%2F%28%28mass+of+electron%29%2B%28mass+of+proton%29%29*%28velocity+of+light%29%5E2*%28sqrt%281-%28fine+structure+constant%29%5E2%2F4%29-sqrt%281-%28fine+structure+constant%29%5E2%29%29"> Wolfram Alpha</a>. Note that in the calculation we use the electron's "<a href="http://en.wikipedia.org/wiki/Reduced_mass#Derivation"> reduced mass</a>" as is required for two-body problems (in this case proton/electron). Using the standard equation for wave energy (E=hf), we determine the <a href="http://www.wolframalpha.com/input/?i=%28mass+of+electron%29*%28mass+of+proton%29%2F%28%28mass+of+electron%29%2B%28mass+of+proton%29%29*%28velocity+of+light%29%5E2*%28sqrt%281-%28fine+structure+constant%29%5E2%2F4%29-sqrt%281-%28fine+structure+constant%29%5E2%29%29%2F%28Planck+constant%29">frequency</a> corresponding to this transition energy.
+<p>This is a calculation we shall entrust once more to <a href="http://www.wolframalpha.com/input/?i=%28mass+of+electron%29*%28mass+of+proton%29%2F%28%28mass+of+electron%29%2B%28mass+of+proton%29%29*%28velocity+of+light%29%5E2*%28sqrt%281-%28fine+structure+constant%29%5E2%2F4%29-sqrt%281-%28fine+structure+constant%29%5E2%29%29">Wolfram Alpha</a>. Note that in the calculation we use the electron's <a href="http://en.wikipedia.org/wiki/Reduced_mass#Derivation">reduced mass</a> as is required for two-body problems (in this case proton/electron). Using the standard equation for wave energy ($E=hf$), we determine the <a href="http://www.wolframalpha.com/input/?i=%28mass+of+electron%29*%28mass+of+proton%29%2F%28%28mass+of+electron%29%2B%28mass+of+proton%29%29*%28velocity+of+light%29%5E2*%28sqrt%281-%28fine+structure+constant%29%5E2%2F4%29-sqrt%281-%28fine+structure+constant%29%5E2%29%29%2F%28Planck+constant%29">frequency</a> corresponding to this transition energy.</p>
 
-<img class="alignnone size-full wp-image-36389 aligncenter" src="https://www.physicsforums.com/insights/wp-content/uploads/2021/01/Hydrogen-Lyman-Alpha-frequency.png" alt="" width="577" height="247" />
+<img class="center-img" src="https://www.physicsforums.com/insights/wp-content/uploads/2021/01/Hydrogen-Lyman-Alpha-frequency.png" alt="Hydrogen Lyman Alpha frequency" width="577" height="247" />
 
-By way of comparison, we obtain the same frequency from NIST's database of transition frequencies in Hydrogen and Deuterium:
+<p>By way of comparison, we obtain the same frequency from NIST's database of transition frequencies in Hydrogen and Deuterium:</p>
 
-<img class="alignnone size-full wp-image-36391 aligncenter" src="https://www.physicsforums.com/insights/wp-content/uploads/2021/01/Lyman-Alpha-Hydrogen-NIST.png" alt="" width="418" height="232" />
+<img class="center-img" src="https://www.physicsforums.com/insights/wp-content/uploads/2021/01/Lyman-Alpha-Hydrogen-NIST.png" alt="Lyman Alpha Hydrogen NIST" width="418" height="232" />
 
-The very small discrepancy between our calculated result and the NIST frequency is largely attributable to the so-called "Ground State Lamb Shift" which we will describe further in the next paragraph. For now, we deduct from our calculation the <a href="https://inspirehep.net/literature/414816">most accurately measured value</a> of this parameter (8.173 GHz) obtaining a Lamb Shift 'corrected'  value of  ##2.46607129 \times 10^{15} Hz## which is a shade lower than the NIST frequency shown above.
-<h3>Measuring Lamb Shift: <a href="http://rspa.royalsocietypublishing.org/content/royprsa/234/1199/516.full.pdf"> The Herzberg Experiment</a></h3>
-In deference to Dr Herzberg - an outstandingly meticulous experimental physicist - we shall simply present his own summary of an experiment carried out in the mid-fifties. This experiment was designed to obtain a highly accurate value of the 1s - 2p transition wavelength for Deuterium (in absorption) so that a measured value of the theoretical "ground state Lamb shift" could be obtained. Apologies to readers who may find the change of units (to wavenumber rather than frequency) confusing but we are presenting Herzberg's work more or less 'verbatim'.
+<p>The very small discrepancy between our calculated result and the NIST frequency is largely attributable to the so-called "Ground State Lamb Shift" which we will describe further in the next paragraph. For now, we deduct from our calculation the <a href="https://inspirehep.net/literature/414816">most accurately measured value</a> of this parameter (8.173 GHz) obtaining a Lamb Shift 'corrected' value of $2.46607129 \times 10^{15}\text{ Hz}$ which is a shade lower than the NIST frequency shown above.</p>
 
-<em>According to modern quantum electrodynamics, the 1S level (ground state) of hydrogen and deuterium is predicted to lie ##0,272 cm^{-1}## above the energy given by the Dirac theory. In order to obtain an experimental value for this Lamb shift, the absolute wavelength of the ##L_{α}## line of deuterium has been determined by means of a 3 m vacuum grating spectrograph in fifth order. Lines of the series </em><em>##6^1S_{0}-n^1P_{1}## </em><em>and  </em><em>##6^1S_{0}-n^3P_{1}## </em><em>of  </em><em>##^{198}Hg## </em><em>observed in the same order were used as standards. The wavelengths of these standards were obtained to ##\pm 0.0002Å## by the combination principle from lines in the visible and near ultra-violet regions, some of which were newly measured. Both the far ultra-violet Hg lines and ##L\alpha## of deuterium were simultaneously recorded on the plate in absorption. In this way, from six independent plates the wavelength of the ##L_{α}## line of deuterium was found to be ##1215.3378 \pm 0.0003Å##. This value refers to an unresolved doublet. If the relative intensity of the two doublet components (2:1)and the temperature of the absorbing column (80°K) is taken into account and the result compared with the Dirac value of ##L_{α}##, a shift of the ##1^2S## level of ##0.26 \pm 0.03cm^{-1}## is obtained. The agreement with the predicted value is very satisfactory.</em>
+<h3>Measuring Lamb Shift: <a href="http://rspa.royalsocietypublishing.org/content/royprsa/234/1199/516.full.pdf">The Herzberg Experiment</a></h3>
+<p>In deference to Dr Herzberg - an outstandingly meticulous experimental physicist - we shall simply present his own summary of an experiment carried out in the mid-fifties. This experiment was designed to obtain a highly accurate value of the 1s - 2p transition wavelength for Deuterium (in absorption) so that a measured value of the theoretical "ground state Lamb shift" could be obtained. Apologies to readers who may find the change of units (to wavenumber rather than frequency) confusing but we are presenting Herzberg's work more or less 'verbatim'.</p>
 
-Using the theory developed above we compare our theoretical value for ##L_{α}## against the Dirac value as obtained in wave number form in the above experiment. We also deduct observed valued from theoretical value to determine a value for Lamb Shift based upon our formula. The Dirac wave number for the Deuterium ##L_{α}## transition as per Herzberg's report is <strong>82281.933 cm<sup>-l</sup></strong> whilst that predicted by our formula is <strong>82281.939 cm<sup>-l</sup></strong>. Deducting Herzberg's very carefully obtained experimental value of <strong>82281.67 cm<sup>-l</sup></strong> determines values of <strong>0,263 cm<sup>-l</sup></strong> and <strong>0,269 cm<sup>-l</sup></strong> respectively for measured Lamb shift. These both compare favourably against the predicted Lamb Shift value of <strong>0.272 cm<sup>-l</sup></strong> as per Herzberg's summary above.
+<blockquote><em>According to modern quantum electrodynamics, the 1S level (ground state) of hydrogen and deuterium is predicted to lie $0.272\text{ cm}^{-1}$ above the energy given by the Dirac theory. In order to obtain an experimental value for this Lamb shift, the absolute wavelength of the $L_{\alpha}$ line of deuterium has been determined by means of a 3 m vacuum grating spectrograph in fifth order. Lines of the series $6^1S_0-n^1P_1$ and $6^1S_0-n^3P_1$ of $^{198}\text{Hg}$ observed in the same order were used as standards. The wavelengths of these standards were obtained to $\pm 0.0002\text{ \AA}$ by the combination principle from lines in the visible and near ultra-violet regions, some of which were newly measured. Both the far ultra-violet Hg lines and $L_{\alpha}$ of deuterium were simultaneously recorded on the plate in absorption. In this way, from six independent plates the wavelength of the $L_{\alpha}$ line of deuterium was found to be $1215.3378 \pm 0.0003\text{ \AA}$. This value refers to an unresolved doublet. If the relative intensity of the two doublet components (2:1) and the temperature of the absorbing column (80°K) is taken into account and the result compared with the Dirac value of $L_{\alpha}$, a shift of the $1^2S$ level of $0.26 \pm 0.03\text{ cm}^{-1}$ is obtained. The agreement with the predicted value is very satisfactory.</em></blockquote>
 
-As was done for Hydrogen earlier, we can also <a href="https://www.wolframalpha.com/input/?i=%28mass+of+electron%29*%28mass+of+deuteron%29%2F%28%28mass+of+electron%29%2B%28mass+of+deuteron%29%29*%28velocity+of+light%29%5E2*%28sqrt%281-%28fine+structure+constant%29%5E2%2F4%29-sqrt%281-%28fine+structure+constant%29%5E2%29%29%2F%28Planck+constant%29">calculate the frequency</a> for the Deuterium ##1s-2p_{3/2}## transition obtaining a result of  ##2.46675048\times 10^{15} Hz.## Deducting the most accurately measured value of ground state Lamb shift for Deuterium (8.184 GHz) results in a Lamb shift corrected value of  ##2.46674230 \times 10^{15}Hz## which is once again a shade lower than the NIST value ##2 466 742 320 324.2(2.4) kHz##. For comparison with Herzberg's experimental value above, this is also given as ##82 281.667 016 594(81) cm^{-1}.## It will be seen that the NIST figures are given with several more digits of accuracy but (to the best of this author's knowledge) Herzberg's result is the most accurately known measured value for this particular transition. The Hydrogen 1s-2s transition has however been measured to an <a href="https://graz.pure.elsevier.com/en/publications/improved-measurement-of-the-hydrogen-1s-2s-transition-frequency-2#:~:text=We%20have%20measured%20the%201S%E2%80%932S%20transition%20frequency%20in,et%20al.,%20Phys.%20Rev.%20Lett.%2092,%20230802%20(2004)].">astonishing degree of accuracy</a>.
-<h3>Measuring the Balmer Alpha Line: <a href="http://fys.bozack.dk/cgi-bin/pdfdownload.php?filelocation=http://fys.bozack.dk/kurser/16atomintro/artikel03.pdf"> Laser Saturation Spectroscopy</a></h3>
-In the seventies a group of physicists (T. W. Hansch, M. H. Nayfeh, S.A. Lee, S.M. Curry, and I.S. Shahin) at Stanford University set out to establish a considerably more accurate value of the Rydberg constant by measuring - to a very high degree of precision - the Balmer Alpha lines of both Hydrogen and Deuterium. Once again we will quote verbatim from these scientists' report in Physical Review Letters Volume 32, Number 24 17 June 1974:
+<p>Using the theory developed above we compare our theoretical value for $L_{\alpha}$ against the Dirac value as obtained in wave number form in the above experiment. We also deduct observed valued from theoretical value to determine a value for Lamb Shift based upon our formula. The Dirac wave number for the Deuterium $L_{\alpha}$ transition as per Herzberg's report is <strong>82281.933 cm<sup>-1</sup></strong> whilst that predicted by our formula is <strong>82281.939 cm<sup>-1</sup></strong>. Deducting Herzberg's very carefully obtained experimental value of <strong>82281.67 cm<sup>-1</sup></strong> determines values of <strong>0.263 cm<sup>-1</sup></strong> and <strong>0.269 cm<sup>-1</sup></strong> respectively for measured Lamb shift. These both compare favourably against the predicted Lamb Shift value of <strong>0.272 cm<sup>-1</sup></strong> as per Herzberg's summary above.</p>
 
-<em>We have determined the Rydberg constant with an almost tenfold improvement in accuracy over other recent experiments, by measuring the absolute wavelength of the optically resolved ##2P_{3/2}-3D_{5/2}## component of the red Balmer line ##H_{α}## of atomic hydrogen and ##D_{α}## of deuterium in a Wood discharge. Doppler broadening was eliminated by saturation spectroscopy' with a pulsed, tunable, dye laser. An iodine-stabilized He-Ne laser served as the wavelength standard. The same measurements provide a new precise value for the H-D isotope shift. We have also determined the splittings between the stronger fine structure components in the optical spectrum to within a few megahertz.</em>
+<p>As was done for Hydrogen earlier, we can also <a href="https://www.wolframalpha.com/input/?i=%28mass+of+electron%29*%28mass+of+deuteron%29%2F%28%28mass+of+electron%29%2B%28mass+of+deuteron%29%29*%28velocity+of+light%29%5E2*%28sqrt%281-%28fine+structure+constant%29%5E2%2F4%29-sqrt%281-%28fine+structure+constant%29%5E2%29%29%2F%28Planck+constant%29">calculate the frequency</a> for the Deuterium $1s-2p_{3/2}$ transition obtaining a result of $2.46675048\times 10^{15}\text{ Hz}$. Deducting the most accurately measured value of ground state Lamb shift for Deuterium (8.184 GHz) results in a Lamb shift corrected value of $2.46674230 \times 10^{15}\text{ Hz}$ which is once again a shade lower than the NIST value $2\,466\,742\,320\,324.2(2.4)\text{ kHz}$. For comparison with Herzberg's experimental value above, this is also given as $82\,281.667\,016\,594(81)\text{ cm}^{-1}$. It will be seen that the NIST figures are given with several more digits of accuracy but (to the best of this author's knowledge) Herzberg's result is the most accurately known measured value for this particular transition. The Hydrogen 1s-2s transition has however been measured to an <a href="https://graz.pure.elsevier.com/en/publications/improved-measurement-of-the-hydrogen-1s-2s-transition-frequency-2#:~:text=We%20have%20measured%20the%201S%E2%80%932S%20transition%20frequency%20in,et%20al.,%20Phys.%20Rev.%20Lett.%2092,%20230802%20(2004)].">astonishing degree of accuracy</a>.</p>
 
-The wavenumbers obtained (by the Stanford group) for the ##H_{α}## and ##D_{α}## (Balmer series) lines were <strong>15233.0721(9) cm<sup>-1</sup></strong> and <strong>15237.21538(8) cm<sup>-1</sup></strong> respectively. The formula we have developed yields predicted values of <strong>15233.0709 cm<sup>-1</sup></strong> and <strong>15237.21585 cm<sup>-1</sup></strong> respectively and it will be seen that the deviation from measured occurs only in the eighth significant figure for Hydrogen and the ninth for Deuterium.  In units of frequency , our calculated value for Deuterium is ##4.56800240\times 10^{14}Hz## as compared to the NIST value of  ##456 800 228 050.4(3.1) kHz##.
+<h3>Measuring the Balmer Alpha Line: <a href="http://fys.bozack.dk/cgi-bin/pdfdownload.php?filelocation=http://fys.bozack.dk/kurser/16atomintro/artikel03.pdf">Laser Saturation Spectroscopy</a></h3>
+<p>In the seventies a group of physicists (T. W. Hänsch, M. H. Nayfeh, S.A. Lee, S.M. Curry, and I.S. Shahin) at Stanford University set out to establish a considerably more accurate value of the Rydberg constant by measuring - to a very high degree of precision - the Balmer Alpha lines of both Hydrogen and Deuterium. Once again we will quote verbatim from these scientists' report in Physical Review Letters Volume 32, Number 24 17 June 1974:</p>
+
+<blockquote><em>We have determined the Rydberg constant with an almost tenfold improvement in accuracy over other recent experiments, by measuring the absolute wavelength of the optically resolved $2P_{3/2}-3D_{5/2}$ component of the red Balmer line $H_{\alpha}$ of atomic hydrogen and $D_{\alpha}$ of deuterium in a Wood discharge. Doppler broadening was eliminated by saturation spectroscopy with a pulsed, tunable, dye laser. An iodine-stabilized He-Ne laser served as the wavelength standard. The same measurements provide a new precise value for the H-D isotope shift. We have also determined the splittings between the stronger fine structure components in the optical spectrum to within a few megahertz.</em></blockquote>
+
+<p>The wavenumbers obtained (by the Stanford group) for the $H_{\alpha}$ and $D_{\alpha}$ (Balmer series) lines were <strong>15233.0721(9) cm<sup>-1</sup></strong> and <strong>15237.21538(8) cm<sup>-1</sup></strong> respectively. The formula we have developed yields predicted values of <strong>15233.0709 cm<sup>-1</sup></strong> and <strong>15237.21585 cm<sup>-1</sup></strong> respectively and it will be seen that the deviation from measured occurs only in the eighth significant figure for Hydrogen and the ninth for Deuterium. In units of frequency, our calculated value for Deuterium is $4.56800240\times 10^{14}\text{ Hz}$ as compared to the NIST value of $456\,800\,228\,050.4(3.1)\text{ kHz}$.</p>
+
 <h3>Dirac Energy Simplification</h3>
-Since the above formula yielded results very closely comparable to accurately measured values, one was led to suspect that it must be very similar to the Dirac Energy formula:
+<p>Since the above formula yielded results very closely comparable to accurately measured values, one was led to suspect that it must be very similar to the Dirac Energy formula:</p>
 
-$$\begin{array}{rl} E_{n\,j} &amp; = \mu c^2\left(1+\left[\dfrac{Z\alpha}{n-|k|+\sqrt{k^2-Z^2\alpha^2}}\right]^2\right)^{-1/2}\\ &amp;\\&amp; \end{array}.$$
+$$ E_{n\,j} = \mu c^2\left(1+\left[\frac{Z\alpha}{n-|k|+\sqrt{k^2-Z^2\alpha^2}}\right]^2\right)^{-1/2}. $$
 
-Following queries submitted to the online Physics Forums and guidance thereby obtained (see <a href="https://www.physicsforums.com/threads/use-the-dirac-equation-to-calculate-transition-frequencies-in-hydrogen.941489/"> this link</a>), the following was determined:
+<p>Following queries submitted to the online Physics Forums and guidance thereby obtained (see <a href="https://www.physicsforums.com/threads/use-the-dirac-equation-to-calculate-transition-frequencies-in-hydrogen.941489/">this link</a>), the following was determined:</p>
 
-For the particular case(s) where for any given principal quantum number n, we set orbital angular momentum quantum number ##l_{max} = n-1## and in turn set total angular momentum quantum number ##j_{max}=l+\frac{1}{2}##, then ##k = j+\frac{1}{2} = l+1 = n ##. Thus n - |k| = 0 and the expression simplifies:
+<p>For the particular case(s) where for any given principal quantum number $n$, we set orbital angular momentum quantum number $l_{max} = n-1$ and in turn set total angular momentum quantum number $j_{max}=l+\frac{1}{2}$, then $k = j+\frac{1}{2} = l+1 = n$. Thus $n - |k| = 0$ and the expression simplifies:</p>
 
-$$\begin{array}{rl} E_{n\,j} &amp; = \mu c^2\left(1+\left[\dfrac{Z\alpha}{\sqrt{n^2-Z^2\alpha^2}}\right]^2\right)^{-1/2}\\ &amp;\\&amp; \end{array}.$$
-$$E_{n\,j} = \mu c^2\left(\frac{n^2}{n^2-Z^2\alpha^2}\right)^{-1/2}=\mu c^2\sqrt{1-\frac{Z^2\alpha^2}{n^2}}. $$
+$$ E_{n\,j} = \mu c^2\left(1+\left[\frac{Z\alpha}{\sqrt{n^2-Z^2\alpha^2}}\right]^2\right)^{-1/2}. $$
+$$ E_{n\,j} = \mu c^2\left(\frac{n^2}{n^2-Z^2\alpha^2}\right)^{-1/2}=\mu c^2\sqrt{1-\frac{Z^2\alpha^2}{n^2}}. $$
 
-So for this particular circumstance, Dirac energy is exactly equivalent to the formula determined above. Presuming we are dealing with Hydrogen/Deuterium and therefore that Z=1 in the formula. The author would like it to be clear that he has very little understanding of how the Dirac energy is conventionally obtained nor indeed of "orbital angular momentum quantum number". The simplification obtained above is simply a result of suspecting a similarity between equations that give the same (or closely similar) numeric results and then noting that in certain circumstances n -|k| = 0 where after the Dirac energy expression can be considerably simplified using straightforward algebra.
-<h4>Summary and Conclusion</h4>
-In this article, we have developed a heuristic model of the Hydrogen atom quantized around the electron's reduced Compton wavelength ##\frac{\hbar}{m_e c}##. The resultant formula (which we have named the "Relativistic Rydberg") has been shown to determine ionization energy and various transition energies in the Hydrogen and/or Deuterium spectrum with great precision.
+<p>So for this particular circumstance, Dirac energy is exactly equivalent to the formula determined above. Presuming we are dealing with Hydrogen/Deuterium and therefore that $Z=1$ in the formula. The author would like it to be clear that he has very little understanding of how the Dirac energy is conventionally obtained nor indeed of "orbital angular momentum quantum number". The simplification obtained above is simply a result of suspecting a similarity between equations that give the same (or closely similar) numeric results and then noting that in certain circumstances $n - |k| = 0$ where after the Dirac energy expression can be considerably simplified using straightforward algebra.</p>
 
-We have also demonstrated that the formula is a simplification of the Dirac energy formula applicable when spin and angular momentum quantum numbers are maximised for any given primary quantum number n. Finally, it can easily be shown that the formula simplifies to the classical Rydberg formula given a one-term binomial expansion of the square root portion of the formula.
-<h4>References</h4>
-<!-- This document was automatically generated with bibtex2html 1.95 (see http://www.lri.fr/~filliatr/bibtex2html/), with the following command: bibtex2html rr.bib -->
+<h3>Summary and Conclusion</h3>
+<p>In this article, we have developed a heuristic model of the Hydrogen atom quantized around the electron's reduced Compton wavelength $\frac{\hbar}{m_e c}$. The resultant formula (which we have named the "Relativistic Rydberg") has been shown to determine ionization energy and various transition energies in the Hydrogen and/or Deuterium spectrum with great precision.</p>
+
+<p>We have also demonstrated that the formula is a simplification of the Dirac energy formula applicable when spin and angular momentum quantum numbers are maximised for any given primary quantum number $n$. Finally, it can easily be shown that the formula simplifies to the classical Rydberg formula given a one-term binomial expansion of the square root portion of the formula.</p>
+
+<h3>References</h3>
 <table>
 <tbody>
 <tr valign="top">
-<td class="bibtexnumber" align="right">[<a name="LambShif0:online"></a>1]</td>
-<td class="bibtexitem">G. Herzberg.
-Lamb shift of the 1s ground state of deuterium on Jstor.
-<a href="https://www.jstor.org/stable/100001?seq=1">https://www.jstor.org/stable/100001?seq=1</a>, March 1956.
-(Accessed on 01/28/2021).
-[ <a href="online">bib</a> ]</td>
+<td align="right">[<a name="LambShif0:online"></a>1]</td>
+<td>G. Herzberg. Lamb shift of the 1s ground state of deuterium on Jstor. <a href="https://www.jstor.org/stable/100001?seq=1">https://www.jstor.org/stable/100001?seq=1</a>, March 1956. (Accessed on 01/28/2021).</td>
 </tr>
 <tr valign="top">
-<td class="bibtexnumber" align="right">[<a name="PhysRevA75:online"></a>2]</td>
-<td class="bibtexitem">M. Weitz A. Huber F. Schmidtkaler D. Leibfried W. Vassen C. Zimmermann K.
-Pachucki T. W. Hänsch L. Julien F. Biraben.
-Phys. rev. a 52, 2664 (1995) - precision measurement of the 1s
-ground-state lamb shift in atomic hydrogen and deuterium by frequency
-comparison.
-<a href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.52.2664">https://journals.aps.org/pra/abstract/10.1103/PhysRevA.52.2664</a>.
-(Accessed on 01/28/2021).
-[ <a href="online">bib</a> ]</td>
+<td align="right">[<a name="PhysRevA75:online"></a>2]</td>
+<td>M. Weitz A. Huber F. Schmidtkaler D. Leibfried W. Vassen C. Zimmermann K. Pachucki T. W. Hänsch L. Julien F. Biraben. Phys. rev. a 52, 2664 (1995) - precision measurement of the 1s ground-state lamb shift in atomic hydrogen and deuterium by frequency comparison. <a href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.52.2664">https://journals.aps.org/pra/abstract/10.1103/PhysRevA.52.2664</a>. (Accessed on 01/28/2021).</td>
 </tr>
 <tr valign="top">
-<td class="bibtexnumber" align="right">[<a name="PhysRevL28:online"></a>3]</td>
-<td class="bibtexitem">T. W. Hänsch M. H. Nayfeh S. A. Lee S. M. Curry and I. S. Shahin.
-Phys. rev. Lett. 32, 1336 (1974) - precision measurement of the
-rydberg constant by laser saturation spectroscopy of the Balmer alpha line in
-hydrogen and deuterium.<a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.32.1336">https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.32.1336</a>.
-(Accessed on 01/28/2021).
-[ <a href="online">bib</a> ]</td>
+<td align="right">[<a name="PhysRevL28:online"></a>3]</td>
+<td>T. W. Hänsch M. H. Nayfeh S. A. Lee S. M. Curry and I. S. Shahin. Phys. rev. Lett. 32, 1336 (1974) - precision measurement of the rydberg constant by laser saturation spectroscopy of the Balmer alpha line in hydrogen and deuterium. <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.32.1336">https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.32.1336</a>. (Accessed on 01/28/2021).</td>
 </tr>
 <tr valign="top">
-<td class="bibtexnumber" align="right">[<a name="NIST_ASD"></a>4]</td>
-<td class="bibtexitem">A. Kramida, Yu. Ralchenko, J. Reader, and and NIST ASD Team.
-NIST Atomic Spectra Database (ver. 5.6.1), [Online]. Available:
-<tt>https://physics.nist.gov/asd</tt> [2019, August 9]. National Institute of
-Standards and Technology, Gaithersburg, MD., 2018.</td>
-</tr>
-<tr valign="top">
-<td class="bibtexnumber" align="right">[<a name="WolframA3:online"></a>5]</td>
-<td class="bibtexitem">Stephen Wolfram.
-Wolfram|alpha: Computational intelligence.
-<a href="https://www.wolframalpha.com/">https://www.wolframalpha.com/</a>.
-(Accessed on 01/28/2021).
-[ <a href="online">bib</a> ]</td>
-</tr>
-<tr valign="top">
-<td class="bibtexnumber" align="right">[<a name="Finestru93:online"></a>6]</td>
-<td class="bibtexitem">Wikipedia Contributors.
-Fine-structure constant - wikipedia.<a href="https://en.wikipedia.org/wiki/Fine-structure_constant#:~:text=In%20physics%2C%20the%20fine%2Dstructure,interaction%20between%20elementary%20charged%20particles.">https://en.wikipedia.org/wiki/Fine-structure_constant#:~:text=In%20physics%2C%20the%20fine%2Dstructure,interaction%20between%20elementary%20charged%20particles.</a>
-(Accessed on 01/28/2021).
-[ <a href="online">bib</a> ]</td>
+<td align="right">[<a name="NIST_ASD"></a>4]</td>
+<td>A. Kramida, Yu. Ralchenko, J. Reader, and NIST ASD Team. NIST Atomic Spectra Database (ver. 5.6.1), [Online]. Available: <tt>https://physics.nist.gov/asd</tt> [2019, August 9]. National Institute of Standards and Technology, Gaithersburg, MD., 2018.</td>
 </tr>
 </tbody>
 </table>
 
-<hr />
-
-<em>This file was generated by
-<a href="http://www.lri.fr/~filliatr/bibtex2html/">bibtex2html</a> 1.95.</em>
-<h4>Footnotes</h4>
-<p id="footnote-1">[1] We may mention at this point that the hitherto 'unschooled' author's first acquaintance with the fine structure constant arose serendipitously from obtaining the ratio of this radius to the Bohr radius. The number '137' arose and was promptly dropped into a search engine yielding various outcomes such as <a href="https://bigthink.com/surprising-science/number-137-physics">this one</a>!</p>
+</body>
+</html>
