@@ -22,7 +22,7 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
             color: #24292e;
-            max-width: 900px;
+            max-width: 950px;
             margin: 40px auto;
             padding: 0 25px;
         }
@@ -80,12 +80,15 @@
             width: 100%;
             border-collapse: collapse;
             margin: 20px 0;
-            font-size: 0.9em;
+            font-size: 0.85em;
+            overflow-x: auto;
+            display: block;
         }
         th, td {
             border: 1px solid #dfe2e5;
             padding: 8px 10px;
             text-align: left;
+            white-space: nowrap;
         }
         th {
             background-color: #f6f8fa;
@@ -133,89 +136,119 @@ $$E_n = \mu c^2 \sqrt{1 - \frac{Z^2\alpha^2}{n^2}}$$
 <p>Under the specific boundary conditions where spin and angular momentum quantum numbers are maximized for a given shell (\(l_{\text{max}} = n - 1\) and \(j_{\text{max}} = l + 1/2\)), the Dirac integer satisfies \(k = n\). Under this constraint, the term \(n - |k|\) vanishes to zero, and Equation 1 reduces algebraically to Equation 2. This demonstrates formal mathematical alignment between the geometric derivation and the Dirac eigenvalue spectrum under maximum angular momentum configurations.</p>
 
 <h2>2. Empirical Validation and Spectral Comparisons</h2>
-<p>To establish rigorous empirical validation, the validation dataset is segregated into two operational classifications: ground-state transitions and ionization potentials requiring radiative Lamb shift corrections (presented in electron-volts and wave numbers), and direct uncorrected evaluations for excited states across Hydrogen, Deuterium, and singly ionized Helium.</p>
+<p>To establish rigorous empirical validation, the validation dataset is segregated into ground-state transitions and ionization potentials requiring radiative Lamb shift corrections, and direct uncorrected evaluations for excited states across Hydrogen, Deuterium, and singly ionized Helium.</p>
 
-<h3>2.1 Calculations Requiring Lamb Shift Adjustments (Ground-State Transitions &amp; Ionization)</h3>
-<p>For ground-state transitions where self-energy and vacuum polarization contributions are non-negligible, radiative corrections are incorporated prior to comparison with experimental reference benchmarks:</p>
-
+<h3>2.1 Calculations Requiring Lamb Shift Adjustments</h3>
 <table>
     <thead>
         <tr>
-            <th>System &amp; Observable</th>
-            <th>Calculated Value</th>
-            <th>Lamb Shift / Correction</th>
-            <th>Measured Benchmark</th>
-            <th>Diff (\(\text{ppb}\))</th>
+            <th>Transition</th>
+            <th>Unit</th>
+            <th>Calculated</th>
+            <th>Correction</th>
+            <th>Notes</th>
+            <th>Corrected Value</th>
+            <th>Baseline</th>
+            <th>Source</th>
+            <th>Diff (ppb)</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td><strong>Hydrogen Ionization</strong></td>
-            <td>\(13.6056931\text{ eV}\)</td>
-            <td>Included</td>
-            <td>\(13.6056931\text{ eV}\)</td>
-            <td>\(< 10\text{ ppb}\)</td>
+            <td><strong>Ionisation energy (H)</strong></td>
+            <td>eV</td>
+            <td>13.59846808</td>
+            <td>0.00003380</td>
+            <td>Lamb shift</td>
+            <td>13.59843427</td>
+            <td>13.59843460</td>
+            <td>NIST</td>
+            <td>23.91</td>
         </tr>
         <tr>
-            <td><strong>Deuterium Ionization</strong></td>
-            <td>\(13.6056698\text{ eV}\)</td>
-            <td>Included</td>
-            <td>\(13.6056698\text{ eV}\)</td>
-            <td>\(< 10\text{ ppb}\)</td>
+            <td><strong>Ionisation energy (D)</strong></td>
+            <td>eV</td>
+            <td>13.60216821</td>
+            <td>0.00003385</td>
+            <td>Lamb shift</td>
+            <td>13.60213435</td>
+            <td>13.60213464</td>
+            <td>NIST</td>
+            <td>20.84</td>
         </tr>
         <tr>
-            <td><strong>Hydrogen Lyman-\(\alpha\)</strong> (\(1s - 2p_{3/2}\))</td>
-            <td>\(82259.165\text{ cm}^{-1}\)</td>
-            <td>Included</td>
-            <td>\(82259.167\text{ cm}^{-1}\)</td>
-            <td>\(24\text{ ppb}\)</td>
+            <td><strong>Lyman Alpha (H)</strong></td>
+            <td>\(\text{cm}^{-1}\)</td>
+            <td>82259.5565</td>
+            <td>0.2726</td>
+            <td>Lamb shift</td>
+            <td>82259.2838</td>
+            <td>82259.2850</td>
+            <td>NIST/Ritz</td>
+            <td>14.19</td>
         </tr>
         <tr>
-            <td><strong>Deuterium Lyman-\(\alpha\)</strong> (\(1s - 2p_{3/2}\))</td>
-            <td>\(82281.085\text{ cm}^{-1}\)</td>
-            <td>Included</td>
-            <td>\(82281.087\text{ cm}^{-1}\)</td>
-            <td>\(24\text{ ppb}\)</td>
+            <td><strong>Lyman Alpha (D)</strong></td>
+            <td>\(\text{cm}^{-1}\)</td>
+            <td>82281.9392</td>
+            <td>0.2730</td>
+            <td>Lamb shift</td>
+            <td>82281.6662</td>
+            <td>82281.6670</td>
+            <td>NIST/Ritz</td>
+            <td>9.56</td>
         </tr>
     </tbody>
 </table>
 
-<h3>2.2 Direct Calculations &amp; Wave Number Transitions (\(\text{cm}^{-1}\), Uncorrected)</h3>
-<p>For excited states and higher-order transitions where radiative self-energy shifts fall below experimental resolution limits, the model yields direct numerical agreement against established benchmarks:</p>
-
+<h3>2.2 Direct Calculations (Uncorrected)</h3>
 <table>
     <thead>
         <tr>
-            <th>System &amp; Transition</th>
-            <th>Calculated Value (\(\text{cm}^{-1}\))</th>
-            <th>Measured Reference (\(\text{cm}^{-1}\))</th>
-            <th>Diff (\(\text{ppb}\))</th>
+            <th>Transition</th>
+            <th>Unit</th>
+            <th>Calculated</th>
+            <th>Correction</th>
+            <th>Notes</th>
+            <th>Corrected Value</th>
+            <th>Baseline</th>
+            <th>Source</th>
+            <th>Diff (ppb)</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td><strong>Hydrogen Balmer-\(\alpha\)</strong> (\(2p_{3/2} - 3d_{5/2}\))</td>
-            <td>\(15233.022\text{ cm}^{-1}\)</td>
-            <td>\(15233.024\text{ cm}^{-1}\)</td>
-            <td>\(131\text{ ppb}\)</td>
+            <td><strong>Balmer Alpha (H)</strong></td>
+            <td>\(\text{cm}^{-1}\)</td>
+            <td>15233.07093</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>15233.07061</td>
+            <td>Stanford Group</td>
+            <td>20.78</td>
         </tr>
         <tr>
-            <td><strong>Deuterium Balmer-\(\alpha\)</strong> (\(2p_{3/2} - 3d_{5/2}\))</td>
-            <td>\(15234.755\text{ cm}^{-1}\)</td>
-            <td>\(15234.757\text{ cm}^{-1}\)</td>
-            <td>\(131\text{ ppb}\)</td>
+            <td><strong>Balmer Alpha (D)</strong></td>
+            <td>\(\text{cm}^{-1}\)</td>
+            <td>15237.21583</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>15237.21538</td>
+            <td>Stanford Group</td>
+            <td>29.71</td>
         </tr>
         <tr>
-            <td><strong>Singly Ionized Helium (\(\text{He II}\))</strong> Rydberg Constant</td>
-            <td>\(109722.27\text{ cm}^{-1}\)</td>
-            <td>\(109722.268\text{ cm}^{-1}\)</td>
-            <td>\(18\text{ ppb}\)</td>
-        </tr>
-        <tr>
-            <td><strong>Singly Ionized Helium (\(\text{He II}\))</strong> Pickering Line (\(4 \to 3\))</td>
-            <td>\(21063.85\text{ cm}^{-1}\)</td>
-            <td>\(21063.849\text{ cm}^{-1}\)</td>
-            <td>\(47\text{ ppb}\)</td>
+            <td><strong>He \(3d_{5/2}\) to \(4f_{7/2}\)</strong></td>
+            <td>\(\text{cm}^{-1}\)</td>
+            <td>21335.0838</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>21335.0846</td>
+            <td>Kessler 1973</td>
+            <td>39.56</td>
         </tr>
     </tbody>
 </table>
@@ -227,7 +260,7 @@ $$E_n = \mu c^2 \sqrt{1 - \frac{Z^2\alpha^2}{n^2}}$$
 
 $$\mu c^2 \sqrt{1 - \frac{Z^2\alpha^2}{n^2}} \approx \mu c^2 - \frac{\mu c^2 Z^2 \alpha^2}{2 n^2}$$
 
-<p>This expansion recovers the classical non-relativistic Rydberg energy expression as a limiting case, demonstrating structural consistency with established low-energy formulas.</p>
+<p>This expansion recovers the classical non-relativistic Rydberg expression as a limiting case, demonstrating structural consistency with established low-energy formulas.</p>
 
 <h2>4. Cohesiveness of the Physical Model</h2>
 <p>The framework interprets atomic orbitals and spectral lines through deterministic, real-space geometric mechanics. By treating the electron as a localized particle subject to high perpendicular acceleration within the nuclear electrostatic field, the model accounts for both sub-picometer helical trajectories and macroscopic magnetic invariants such as the Bohr magneton (\(\mu_B\)). The resulting formulation provides a self-consistent physical description connecting classical dynamics to relativistic quantum states.</p>
