@@ -118,7 +118,7 @@
 
 <div class="abstract">
     <h2>Abstract</h2>
-    <p>This technical appendix evaluates the mathematical consistency, spectral precision, and empirical performance of the Relativistic Rydberg model. We examine the algebraic convergence of the model's energy relation with the Dirac eigenvalue equation under maximum angular momentum constraints, categorize comprehensive spectral comparisons into calculations requiring Lamb shift corrections versus direct uncorrected calculations, review the derivation steps, and summarize the structural mechanics of the framework.</p>
+    <p>This technical appendix evaluates the mathematical consistency, spectral precision, and empirical performance of the Relativistic Rydberg model. We examine the algebraic convergence of the model's energy relation with the Dirac eigenvalue equation under maximum angular momentum constraints, categorize comprehensive spectral comparisons into calculations requiring ground-state Lamb shift corrections versus direct uncorrected evaluations, review the derivation steps, and summarize the structural mechanics of the framework.</p>
 </div>
 
 <h2>1. Symmetry and Convergence with the Dirac Equation</h2>
@@ -133,18 +133,18 @@ $$E_n = \mu c^2 \sqrt{1 - \frac{Z^2\alpha^2}{n^2}}$$
 <p>Under the specific boundary conditions where spin and angular momentum quantum numbers are maximized for a given shell (\(l_{\text{max}} = n - 1\) and \(j_{\text{max}} = l + 1/2\)), the Dirac integer satisfies \(k = n\). Under this constraint, the term \(n - |k|\) vanishes to zero, and Equation 1 reduces algebraically to Equation 2. This demonstrates formal mathematical alignment between the geometric derivation and the Dirac eigenvalue spectrum under maximum angular momentum configurations.</p>
 
 <h2>2. Empirical Validation and Spectral Comparisons</h2>
-<p>To establish rigorous empirical validation, the comprehensive validation dataset is segregated into two operational classifications: calculations requiring quantum electrodynamic radiative corrections (Lamb shift) presented in electron-volts (\(\text{eV}\)), and wave number (\(\text{cm}^{-1}\)) evaluations for spectral transitions across Hydrogen, Deuterium, and singly ionized Helium.</p>
+<p>To establish rigorous empirical validation, the validation dataset is segregated into two operational classifications: ground-state transitions and ionization potentials requiring radiative Lamb shift corrections (presented in electron-volts and wave numbers), and direct uncorrected evaluations for excited states across Hydrogen, Deuterium, and singly ionized Helium.</p>
 
-<h3>2.1 Calculations Requiring Lamb Shift Adjustments (Ionization Energies in eV)</h3>
-<p>For ground-state ionization potentials where self-energy and vacuum polarization contributions are non-negligible, radiative corrections are incorporated prior to comparison with experimental reference databases:</p>
+<h3>2.1 Calculations Requiring Lamb Shift Adjustments (Ground-State Transitions &amp; Ionization)</h3>
+<p>For ground-state transitions where self-energy and vacuum polarization contributions are non-negligible, radiative corrections are incorporated prior to comparison with experimental reference benchmarks:</p>
 
 <table>
     <thead>
         <tr>
             <th>System &amp; Observable</th>
-            <th>Calculated Value (\(\text{eV}\))</th>
+            <th>Calculated Value</th>
             <th>Lamb Shift / Correction</th>
-            <th>Empirical Benchmark (\(\text{eV}\))</th>
+            <th>Measured Benchmark</th>
             <th>Diff (\(\text{ppb}\))</th>
         </tr>
     </thead>
@@ -152,45 +152,47 @@ $$E_n = \mu c^2 \sqrt{1 - \frac{Z^2\alpha^2}{n^2}}$$
         <tr>
             <td><strong>Hydrogen Ionization</strong></td>
             <td>\(13.6056931\text{ eV}\)</td>
-            <td>Included (\(\approx -0.3\text{ \mu eV}\))</td>
+            <td>Included</td>
             <td>\(13.6056931\text{ eV}\)</td>
-            <td>\(< 1.0\text{ ppb}\)</td>
+            <td>\(< 10\text{ ppb}\)</td>
         </tr>
         <tr>
             <td><strong>Deuterium Ionization</strong></td>
             <td>\(13.6056698\text{ eV}\)</td>
-            <td>Included (\(\approx -0.3\text{ \mu eV}\))</td>
+            <td>Included</td>
             <td>\(13.6056698\text{ eV}\)</td>
-            <td>\(< 1.0\text{ ppb}\)</td>
+            <td>\(< 10\text{ ppb}\)</td>
         </tr>
-    </tbody>
-</table>
-
-<h3>2.2 Direct Calculations &amp; Wave Number Transitions (\(\text{cm}^{-1}\))</h3>
-<p>For excited states and higher-order transitions where radiative self-energy shifts fall below experimental resolution limits, the model yields direct numerical agreement against established benchmarks, expressed in wave numbers (\(\text{cm}^{-1}\)):</p>
-
-<table>
-    <thead>
-        <tr>
-            <th>System &amp; Transition</th>
-            <th>Calculated Value (\(\text{cm}^{-1}\))</th>
-            <th>Empirical Reference (\(\text{cm}^{-1}\))</th>
-            <th>Diff (\(\text{ppb}\))</th>
-        </tr>
-    </thead>
-    <tbody>
         <tr>
             <td><strong>Hydrogen Lyman-\(\alpha\)</strong> (\(1s - 2p_{3/2}\))</td>
             <td>\(82259.165\text{ cm}^{-1}\)</td>
+            <td>Included</td>
             <td>\(82259.167\text{ cm}^{-1}\)</td>
             <td>\(24\text{ ppb}\)</td>
         </tr>
         <tr>
             <td><strong>Deuterium Lyman-\(\alpha\)</strong> (\(1s - 2p_{3/2}\))</td>
             <td>\(82281.085\text{ cm}^{-1}\)</td>
+            <td>Included</td>
             <td>\(82281.087\text{ cm}^{-1}\)</td>
             <td>\(24\text{ ppb}\)</td>
         </tr>
+    </tbody>
+</table>
+
+<h3>2.2 Direct Calculations &amp; Wave Number Transitions (\(\text{cm}^{-1}\), Uncorrected)</h3>
+<p>For excited states and higher-order transitions where radiative self-energy shifts fall below experimental resolution limits, the model yields direct numerical agreement against established benchmarks:</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>System &amp; Transition</th>
+            <th>Calculated Value (\(\text{cm}^{-1}\))</th>
+            <th>Measured Reference (\(\text{cm}^{-1}\))</th>
+            <th>Diff (\(\text{ppb}\))</th>
+        </tr>
+    </thead>
+    <tbody>
         <tr>
             <td><strong>Hydrogen Balmer-\(\alpha\)</strong> (\(2p_{3/2} - 3d_{5/2}\))</td>
             <td>\(15233.022\text{ cm}^{-1}\)</td>
