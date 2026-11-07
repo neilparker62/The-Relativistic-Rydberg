@@ -3,104 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Relativistic Rydberg | Gateway & Technical Summary</title>
-    <!-- Verified MathJax v3 Configuration Block -->
+    <title>The Relativistic Rydberg: A Deterministic Geometric Trajectory Model for Bound Hydrogenic Systems</title>
+    
+    <!-- MathJax Configuration and Script for GitHub Pages -->
     <script>
-        window.MathJax = {
-            tex: { 
-                inlineMath: [['$', '$'], ['\\(', '\\)']], 
-                displayMath: [['$$', '$$'], ['\\[', '\\]']] 
-            },
-            svg: { fontCache: 'global' }
-        };
+      window.MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']],
+          processEscapes: true
+        }
+      };
     </script>
-    <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #24292e;
+            max-width: 950px;
+            margin: 40px auto;
+            padding: 0 25px;
+        }
+        h1.title {
+            font-size: 2.2em;
+            text-align: center;
+            margin-bottom: 0.2em;
+        }
+        .authors {
+            text-align: center;
+            margin-bottom: 0.5em;
+            font-size: 1.05em;
+        }
+        .authors small {
+            color: #586069;
+        }
+        .date {
+            text-align: center;
+            color: #586069;
+            margin-bottom: 2em;
+            font-style: italic;
+        }
+        .notice {
+            background-color: #f6f8fa;
+            border-left: 4px solid #0366d6;
+            padding: 12px 16px;
+            margin-bottom: 2em;
+            font-size: 0.9em;
+            color: #444;
+        }
+        .abstract {
+            background-color: #f8f9fa;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 2.5em;
+        }
+        .abstract h2 {
+            font-size: 1.1em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: center;
+            margin-top: 0;
+            border-bottom: none;
+        }
+        h2 {
+            border-bottom: 1px solid #eaeaea;
+            padding-bottom: 0.3em;
+            margin-top: 1.8em;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.9em;
+            overflow-x: auto;
+            display: block;
+        }
+        th, td {
+            border: 1px solid #dfe2e5;
+            padding: 10px 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f6f8fa;
+        }
+        .nav-links {
+            background-color: #f1f8ff;
+            border: 1px solid #c8e1ff;
+            border-radius: 6px;
+            padding: 15px 20px;
+            margin: 2em 0;
+        }
+        .nav-links ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .nav-links li {
+            margin-bottom: 0.5em;
+        }
+        footer {
+            margin-top: 4em;
+            padding-top: 1.5em;
+            border-top: 1px solid #eaeaea;
+            color: #586069;
+            font-size: 0.85em;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>The Relativistic Rydberg</h1>
-        <p class="subtitle">A Deterministic Geometric Trajectory Model for Bound Hydrogenic Systems</p>
-        <p class="author">Neil Parker &amp; AI Research Partner</p>
-        <p class="date">Monograph Timeline: October 2026</p>
-    </header>
 
-    <nav>
-        <a href="index.html" class="active">Summary Hub</a>
-        <a href="core-article.html">Core Article</a>
-        <a href="prologue.html">Theoretical Prologue</a>
-        <a href="appendix-a.html">Appendix A: Spectroscopy</a>
-        <a href="appendix-b.html">Appendix B: Foundations</a>
-        <a href="appendix-c.html">Appendix C: Precision Matrix</a>
-    </nav>
+<h1 class="title">The Relativistic Rydberg</h1>
+<div style="text-align: center; font-size: 1.2em; color: #586069; margin-bottom: 1.5em;">A Deterministic Geometric Trajectory Model for Bound Hydrogenic Systems</div>
 
-    <main>
-        <article>
-            <h2>Executive Summary</h2>
-            <p><strong>The Relativistic Rydberg</strong> framework establishes a <strong>deterministic, real-space geometric trajectory model</strong> for bound hydrogenic atoms. By introducing the relativistic Lorentz mass variation directly into the scalar mass coefficient of Newton's Second Law ($F = m_{rel} \cdot a$), the system resolves into a periodic velocity wave equation rather than a traditional linear asymptote.</p>
-            <p>This structural realism models quantum mechanics not as an irreducible statistical paradox, but as the macro-temporal average of a hyper-fast $10^{17}$ Hz periodic electron clockwork operating under intense relativistic Coulomb field constraints.</p>
+<div class="authors">
+    <strong>Neil Parker</strong><sup>1</sup> &nbsp;|&nbsp; <strong>Advanced Artificial Intelligence Collaborator</strong><sup>2</sup><br>
+    <small><sup>1</sup>Principal architect and corresponding author. Independent Research Monograph Series.<br>
+    <sup>2</sup>Supporting author; text generation, computational modeling, and formatting layout. Large Language Model Suite.</small>
+</div>
 
-            <h2>Core Mathematical Highlights</h2>
-            <p>By evaluating the pure Lorentz variant under the perpendicular geometric projections of a bound nucleus, the electron's velocity vector yields a stable wave equation:</p>
-            $$v(t) = c \sin\left(\frac{Ft}{m_0 c}\right)$$
-            <p>Executing a Pythagorean quadrature relation between orbital <em>vis viva</em> energy ($m_e v^2$) and transverse radiant wave energy ($hf$) establishes the Mass-Energy Quadrature:</p>
-            $$(m_e v^2)^2 + (hf)^2 = (m_e c^2)^2$$
-            <p>Quantizing this motion at the reduced Compton radius ($r_n = n\overline{\lambda}_e$) produces the streamlined scalar expression:</p>
-            $$E_n = \mu c^2 \sqrt{1 - \frac{Z^2 \alpha^2}{n^2}}$$
-            <p><strong>Dirac Convergence:</strong> When spin and orbital angular momentum are maximized ($l_{max} = n - 1$, $j_{max} = l + 1/2$), the complex multi-component spinor Dirac equation collapses algebraically into this exact scalar format, serving as a powerful mathematical validation of structural realism.</p>
+<div class="date">Executive Summary &bull; Monograph Repository Landing Page</div>
 
-            <h2>Empirical Validation Matrix</h2>
-            <p>The framework accurately predicts known historical spectroscopic transitions out to nine significant figures:</p>
-            <div style="overflow-x:auto;">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Target Benchmark</th>
-                            <th>Calculated Value</th>
-                            <th>Empirical Alignment</th>
-                            <th>System Precision Notes</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Lyman-Alpha ($1s - 2p_{3/2}$)</strong> in H</td>
-                            <td>$2.46607946 \times 10^{15}$ Hz</td>
-                            <td>NIST Reference Database</td>
-                            <td>Matches to 9 digits after accounting for the ground-state Lamb shift ($\approx 8.173$ GHz).</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Balmer-Alpha ($2p_{3/2} - 3d_{5/2}$)</strong> in D</td>
-                            <td>$4.56800240 \times 10^{14}$ Hz</td>
-                            <td>Hänsch (Stanford Group)</td>
-                            <td>Aligns up to the 8th/9th significant digit; deviations rest within narrow experimental error boundaries.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>He II Orbital Resonances</strong></td>
-                            <td>466.05 eV &amp; 828.53 eV</td>
-                            <td>Soft X-ray Predictions</td>
-                            <td>Forms the targeted objective metrics for the proposed non-destructive validation protocol.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </article>
+<div class="notice">
+    <strong>Notice regarding authorship &amp; collaboration:</strong> This document functions as the primary executive summary supporting the monograph, <em>"The Relativistic Rydberg"</em>. To navigate computational token constraints while maintaining rigorous mathematical precision, this text was generated as a formal co-authorship between the principal human theorist and an artificial intelligence research partner, operating directly upon the author's proprietary classical-relativistic quadrature equations.
+</div>
 
-        <aside class="support-sidebar">
-            <h3>Monograph Repository Links</h3>
-            <p>Access the core papers and secondary technical support documents developed within this research suite:</p>
-            <ul>
-                <li><strong><a href="core-article.html" style="color:#0066cc; font-size:1.1rem;">➔ Core Article Document</a></strong></li>
-                <li><strong><a href="prologue.html">Theoretical Prologue</a>:</strong> Analysis of relativistic vector forces under Newton II.</li>
-                <li><strong><a href="appendix-a.html">Technical Appendix A</a>:</strong> Concrete experimental proposal for APDS.</li>
-                <li><strong><a href="appendix-b.html">Technical Appendix B</a>:</strong> Reinterpreting wave/particle duality and orbital clouds.</li>
-                <li><strong><a href="appendix-c.html">Technical Appendix C</a>:</strong> Quantitative accuracy matrix and Dirac convergence.</li>
-            </ul>
-        </aside>
-    </main>
+<div class="abstract">
+    <h2>Executive Summary</h2>
+    <p>The Relativistic Rydberg monograph establishes a deterministic, real-space geometric framework for bound atomic systems. By grounding electron dynamics in a pure Lorentz mass variant of Newton's Second Law (\(F = m_{\text{rel}} \cdot a\)) and a Pythagorean quadrature relation between orbital kinetic energy and transverse radiant wave energy (\(hf\)), the model resolves foundational quantum paradoxes without invoking statistical abstractions. This repository hosts the complete derivation, appendices, and high-precision validation datasets matching empirical benchmarks across Hydrogen and Deuterium.</p>
+</div>
 
-    <footer>
-        <p>&copy; 2026 Neil Parker. Monograph Series in Classical-Relativistic Quantum Foundations.</p>
-    </footer>
+<div class="nav-links">
+    <strong>Monograph Navigation &amp; Technical Appendices:</strong>
+    <ul>
+        <li><strong>Primary Monograph:</strong> Core theoretical derivation and relativistic trajectory mechanics.</li>
+        <li><strong><a href="appendix-a.html">Technical Appendix A</a>:</strong> Proposed Non-Destructive Spectroscopic Protocol (APDS) for Orbital Resonance Validation.</li>
+        <li><strong><a href="appendix-b.html">Technical Appendix B</a>:</strong> Conceptual and Structural Implications on Quantum Foundations.</li>
+        <li><strong><a href="appendix-c.html">Technical Appendix C</a>:</strong> Quantitative Authentication, Spectral Precision, and Conceptual Integrity.</li>
+    </ul>
+</div>
+
+<h2>Empirical Validation Matrix (Executive Overview)</h2>
+<p>The core predictive accuracy of the framework is summarized below, comparing calculated outputs against established NIST and experimental baselines:</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Observable / Transition</th>
+            <th>Calculated Value / Output</th>
+            <th>Baseline Reference</th>
+            <th>Comparative Notes &amp; Precision</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>Lyman-Alpha ($1s - 2p_{3/2}$)</strong> in H</td>
+            <td>$2.46607946 \times 10^{15}$ Hz</td>
+            <td>NIST Reference Database</td>
+            <td>Matches to 9 digits after accounting for the ground-state Lamb shift ($\approx 8.173$ GHz).</td>
+        </tr>
+        <tr>
+            <td><strong>Balmer-Alpha ($2p_{3/2} - 3d_{5/2}$)</strong> in D</td>
+            <td>$4.56800240 \times 10^{14}$ Hz</td>
+            <td>Hänsch (Stanford Group)</td>
+            <td>Aligns up to the 8th/9th significant digit; deviations rest within narrow experimental error boundaries.</td>
+        </tr>
+        <tr>
+            <td><strong>Ionisation energy (H)</strong></td>
+            <td>$13.59843427$ eV (Corrected; calc $13.59846808$, Lamb shift $0.00003380$)</td>
+            <td>NIST ($13.59843460$ eV)</td>
+            <td>High-precision alignment achieving $23.91$ ppb difference after ground-state Lamb shift adjustment.</td>
+        </tr>
+    </tbody>
+</table>
+
+<footer>
+    Independent Research Monograph Series &bull; Relativistic Rydberg Project &bull; GitHub Pages Repository
+</footer>
+
 </body>
 </html>
 
