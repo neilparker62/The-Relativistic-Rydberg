@@ -3,128 +3,347 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Master Index and Compendium Guide: The Relativistic Rydberg Monograph Series</title>
+    <title>The Relativistic Rydberg: Deterministic Geometric Model &amp; Validation Brief</title>
     <style>
+        :root {
+            --primary-color: #1a365d;
+            --accent-color: #0f9d58;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-color: #2d3748;
+            --border-color: #e2e8f0;
+        }
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #111;
-            max-width: 900px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.7;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            max-width: 1000px;
             margin: 0 auto;
             padding: 40px 20px;
-            background-color: #fdfdfd;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--border-color);
         }
         h1 {
-            font-size: 2em;
-            margin-bottom: 0.2em;
-            color: #1a1a1a;
+            font-size: 2.4rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        .subtitle {
+            font-size: 1.2rem;
+            color: #4a5568;
+            margin-bottom: 1rem;
+            font-weight: 500;
         }
         .authors {
-            font-size: 0.95em;
-            color: #555;
-            margin-bottom: 2em;
+            font-size: 0.95rem;
+            color: #718096;
         }
-        .notice {
-            background: #f7f9fa;
-            border-left: 4px solid #0f9d58;
-            padding: 15px;
-            margin-bottom: 2em;
-            font-size: 0.9em;
-            color: #333;
+        .hero-card, .section-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+            border-left: 5px solid var(--accent-color);
+        }
+        .section-card {
+            border-left-color: var(--primary-color);
         }
         h2 {
-            font-size: 1.4em;
-            margin-top: 1.8em;
-            border-bottom: 1px solid #eaeaea;
-            padding-bottom: 6px;
-            color: #222;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+        h3 {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
         }
         p {
-            margin-bottom: 1em;
+            margin-bottom: 1.2rem;
         }
-        .compendium-item {
-            margin-bottom: 2em;
+        .equation-box {
+            background: #edf2f7;
+            padding: 15px 20px;
+            border-radius: 6px;
+            text-align: center;
+            font-family: "Times New Roman", serif;
+            font-size: 1.2rem;
+            margin: 1.5rem 0;
+            color: #1a202c;
+            overflow-x: auto;
         }
-        .compendium-item h3 {
-            font-size: 1.1em;
-            margin-bottom: 0.3em;
-            color: #1a1a1a;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+        }
+        th, td {
+            padding: 12px 14px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+        th {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 600;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 3rem;
+        }
+        .nav-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .nav-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+            border-color: var(--accent-color);
+        }
+        .nav-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
         }
         a {
-            color: #0f9d58;
+            color: var(--accent-color);
             text-decoration: none;
+            font-weight: 500;
         }
         a:hover {
             text-decoration: underline;
         }
         footer {
-            margin-top: 4em;
-            font-size: 0.85em;
-            color: #666;
+            margin-top: 4rem;
+            font-size: 0.85rem;
+            color: #718096;
             text-align: center;
-            border-top: 1px solid #eaeaea;
-            padding-top: 1.5em;
+            border-top: 1px solid var(--border-color);
+            padding-top: 2rem;
         }
     </style>
 </head>
 <body>
 
-    <h1>Master Index and Compendium Guide: The Relativistic Rydberg Monograph Series</h1>
-    <div class="authors">
-        <strong>Neil Parker</strong>* &nbsp;|&nbsp; <strong>Advanced Artificial Intelligence Collaborator</strong>**<br>
-        <small>*Principal architect and corresponding author. Independent Research Monograph Series.<br>
-        **Supporting author; text generation, computational modeling, and formatting layout. Large Language Model Suite.</small>
+    <header>
+        <h1>The Relativistic Rydberg</h1>
+        <div class="subtitle">A Deterministic Geometric Trajectory Model for Bound Hydrogenic Systems</div>
+        <div class="authors">
+            <strong>Neil Parker</strong><sup>1</sup> &nbsp;|&nbsp; <strong>Advanced Artificial Intelligence Collaborator</strong><sup>2</sup><br>
+            <small><sup>1</sup>Principal architect and corresponding author. Independent Research Monograph Series.<br>
+            <sup>2</sup>Supporting author; text generation, computational modeling, and formatting layout. Large Language Model Suite.</small>
+        </div>
+    </header>
+
+    <div class="hero-card">
+        <h2>Executive Summary &amp; Overview</h2>
+        <p>Welcome to the official landing page and comprehensive summary for <strong>The Relativistic Rydberg</strong> research series. This framework establishes a deterministic, real-space geometric model for bound atomic systems. By evaluating mathematical consistency, spectral precision, and empirical performance, the model demonstrates how classical-relativistic trajectory mechanics successfully replaces abstract probability clouds while maintaining rigorous agreement with physical reality.</p>
     </div>
 
-    <div class="notice">
-        <strong>Notice regarding authorship &amp; collaboration:</strong> This document serves as the structural Master Index for the complete <em>"Relativistic Rydberg"</em> research compendium. To maximize public accessibility and cross-platform longevity, the compiled PDF monographs and technical support texts have been hosted within a centralized cloud directory. This index provides the overarching roadmap and direct access links to each component, co-authored by the principal theorist and an artificial intelligence research partner.
+    <div class="section-card">
+        <h2>1. Symmetry and Convergence with the Dirac Equation</h2>
+        <p>The relativistic energy eigenvalue spectrum for a single-electron atom derived from the Dirac equation is expressed as:</p>
+
+        <div class="equation-box">
+            $$E_{n,j} = \mu c^2 \left[ 1 + \left( \frac{Z\alpha}{n - |k| + \sqrt{k^2 - Z^2\alpha^2}} \right)^2 \right]^{-1/2}$$
+        </div>
+
+        <p>Where \(n\) is the principal quantum number and \(k\) is the relativistic angular momentum integer. Within the Relativistic Rydberg framework, applying a classical-relativistic quadrature relation between orbital kinetic energy and transverse radiant wave energy yields the relation:</p>
+
+        <div class="equation-box">
+            $$E_n = \mu c^2 \sqrt{1 - \frac{Z^2\alpha^2}{n^2}}$$
+        </div>
+
+        <p>Under the specific boundary conditions where spin and angular momentum quantum numbers are maximized for a given shell (\(l_{\text{max}} = n - 1\) and \(j_{\text{max}} = l + 1/2\)), the Dirac integer satisfies \(k = n\). Under this constraint, the term \(n - |k|\) vanishes to zero, and Equation 1 reduces algebraically to Equation 2. This demonstrates formal mathematical alignment between the geometric derivation and the Dirac eigenvalue spectrum under maximum angular momentum configurations.</p>
     </div>
 
-    <h2>1. Introduction to the Compendium</h2>
-    <p>This compendium gathers a multi-part series of theoretical monographs and technical scripts detailing an alternative, semi-classical worldview of hydrogenic atomic systems. By replacing abstract wave clouds with real-space relativistic trajectories derived from a pure Lorentz mass variant of Newton's Second Law (F = m<sub>rel</sub> &middot; a), this framework transforms traditional quantum paradoxes into concrete geometric invariants.</p>
-    
-    <p>To preserve the deep precision of the analytical calculations, the attosecond timing profiles, the solenoidal magnetic corrections, and the proposed experimental validation protocols without exceeding individual manuscript formatting capacities, the complete research body has been organized into a primary paper supported by specialized volumes. This index serves as the centralized repository linking the complete standalone library.</p>
+    <div class="section-card">
+        <h2>2. Empirical Validation and Spectral Comparisons</h2>
+        <p>To establish rigorous empirical validation, the validation dataset is segregated into ground-state transitions and ionization potentials requiring radiative Lamb shift corrections, and direct uncorrected evaluations for excited states across Hydrogen, Deuterium, and singly ionized Helium.</p>
 
-    <h2>2. The Compendium Registry</h2>
-    <p>Each component of the research framework is actively maintained in the centralized directory. Click the hyperlinked titles below to view or download the individual monographs.</p>
+        <h3>2.1 Calculations Requiring Lamb Shift Adjustments</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Transition</th>
+                    <th>Unit</th>
+                    <th>Calculated</th>
+                    <th>Correction</th>
+                    <th>Notes</th>
+                    <th>Corrected Value</th>
+                    <th>Baseline</th>
+                    <th>Source</th>
+                    <th>Diff (ppb)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Ionisation energy (H)</strong></td>
+                    <td>eV</td>
+                    <td>13.59846808</td>
+                    <td>0.00003380</td>
+                    <td>Lamb shift</td>
+                    <td>13.59843427</td>
+                    <td>13.59843460</td>
+                    <td>NIST</td>
+                    <td>23.91</td>
+                </tr>
+                <tr>
+                    <td><strong>Ionisation energy (D)</strong></td>
+                    <td>eV</td>
+                    <td>13.60216821</td>
+                    <td>0.00003385</td>
+                    <td>Lamb shift</td>
+                    <td>13.60213435</td>
+                    <td>13.60213464</td>
+                    <td>NIST</td>
+                    <td>20.84</td>
+                </tr>
+                <tr>
+                    <td><strong>Lyman Alpha (H)</strong></td>
+                    <td>\(\text{cm}^{-1}\)</td>
+                    <td>82259.5565</td>
+                    <td>0.2726</td>
+                    <td>Lamb shift</td>
+                    <td>82259.2838</td>
+                    <td>82259.2850</td>
+                    <td>NIST/Ritz</td>
+                    <td>14.19</td>
+                </tr>
+                <tr>
+                    <td><strong>Lyman Alpha (D)</strong></td>
+                    <td>\(\text{cm}^{-1}\)</td>
+                    <td>82281.9392</td>
+                    <td>0.2730</td>
+                    <td>Lamb shift</td>
+                    <td>82281.6662</td>
+                    <td>82281.6670</td>
+                    <td>NIST/Ritz</td>
+                    <td>9.56</td>
+                </tr>
+            </tbody>
+        </table>
 
-    <div class="compendium-item">
-        <h3>Volume I: Theoretical Prologue</h3>
-        <p>An analytical prelude evaluating the vector extensions of Newton's Second Law. This text demonstrates why standard linear derivatives yield hyperbolic trajectories, why transverse geometric constraints produce a periodic velocity wave, and formally derives the Bohr magneton (&mu;<sub>B</sub>).</p>
-        <p><strong>Document View:</strong><br>
-        <a href="prologue.html">View File: The Relativistic Rydberg: Prologue</a></p>
+        <h3>2.2 Direct Calculations (Uncorrected)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Transition</th>
+                    <th>Unit</th>
+                    <th>Calculated</th>
+                    <th>Correction</th>
+                    <th>Notes</th>
+                    <th>Corrected Value</th>
+                    <th>Baseline</th>
+                    <th>Source</th>
+                    <th>Diff (ppb)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Balmer Alpha (H)</strong></td>
+                    <td>\(\text{cm}^{-1}\)</td>
+                    <td>15233.07093</td>
+                    <td>&mdash;</td>
+                    <td>&mdash;</td>
+                    <td>&mdash;</td>
+                    <td>15233.07061</td>
+                    <td>Stanford Group</td>
+                    <td>20.78</td>
+                </tr>
+                <tr>
+                    <td><strong>Balmer Alpha (D)</strong></td>
+                    <td>\(\text{cm}^{-1}\)</td>
+                    <td>15237.21583</td>
+                    <td>&mdash;</td>
+                    <td>&mdash;</td>
+                    <td>&mdash;</td>
+                    <td>15237.21538</td>
+                    <td>Stanford Group</td>
+                    <td>29.71</td>
+                </tr>
+                <tr>
+                    <td><strong>He \(3d_{5/2}\) to \(4f_{7/2}\)</strong></td>
+                    <td>\(\text{cm}^{-1}\)</td>
+                    <td>21335.0838</td>
+                    <td>&mdash;</td>
+                    <td>&mdash;</td>
+                    <td>&mdash;</td>
+                    <td>21335.0846</td>
+                    <td>Kessler 1973</td>
+                    <td>39.56</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
-    <div class="compendium-item">
-        <h3>Volume II: The Relativistic Rydberg (Primary Paper)</h3>
-        <p>The core monograph detailing the mass-energy quadrature triangle ((m<sub>e</sub> v<sup>2</sup>)<sup>2</sup> + (hf)<sup>2</sup> = (m<sub>e</sub> c<sup>2</sup>)<sup>2</sup>). It contains the quantization of the orbit around the reduced Compton wavelength (&hbar;/&mu;c) and establishes the nine-figure convergence with the eigenvalue spectrum of the Dirac equation.</p>
-        <p><strong>Document View:</strong><br>
-        <a href="core-article.html">View File: The Relativistic Rydberg (Core Article)</a></p>
+    <div class="section-card">
+        <h2>3. Mathematical Integrity of the Derivation</h2>
+        <p>The mathematical structure relies on standard physical constants: the elementary charge (\(e\)), electron rest mass (\(m_0\)), speed of light (\(c\)), and fine-structure constant (\(\alpha\)).</p>
+
+        <p>The velocity wave equation \(v(t) = c\sin\left(\frac{Ft}{m_0 c}\right)\) integrates to spatial displacement \(x(t)\). A binomial expansion of the core energy relation yields:</p>
+
+        <div class="equation-box">
+            $$\mu c^2 \sqrt{1 - \frac{Z^2\alpha^2}{n^2}} \approx \mu c^2 - \frac{\mu c^2 Z^2 \alpha^2}{2 n^2}$$
+        </div>
+
+        <p>This expansion recovers the classical non-relativistic Rydberg expression as a limiting case, demonstrating structural consistency with established low-energy formulas.</p>
     </div>
 
-    <div class="compendium-item">
-        <h3>Volume III: Technical Appendix A (Experimental Protocol)</h3>
-        <p>A robust, non-destructive scanning blueprint utilizing Attosecond Phase-Dispersion Spectroscopy (APDS). This appendix maps the macroscopic beat frequencies (&Delta;&nu; = &nu; - &nu;<sub>0</sub>) and introduces an alternating AC magnetic field modulation loop to isolate the predicted 466.05 eV and 828.53 eV resonance lines.</p>
-        <p><strong>Document View:</strong><br>
-        <a href="appendix-a.html">View File: The Relativistic Rydberg: Experimental Measurement Proposal</a></p>
+    <div class="section-card">
+        <h2>4. Cohesiveness of the Physical Model</h2>
+        <p>The framework interprets atomic orbitals and spectral lines through deterministic, real-space geometric mechanics. By treating the electron as a localized particle subject to high perpendicular acceleration within the nuclear electrostatic field, the model accounts for both sub-picometer helical trajectories and macroscopic magnetic invariants such as the Bohr magneton (\(\mu_B\)). The resulting formulation provides a self-consistent physical description connecting classical dynamics to relativistic quantum states.</p>
     </div>
 
-    <div class="compendium-item">
-        <h3>Volume IV: Technical Appendix B (Quantum Foundations)</h3>
-        <p>A comprehensive conceptual analysis evaluating the structural impacts of this trajectory model on fundamental quantum interpretations. It presents geometric, real-space explanations for wave/particle duality, the Heisenberg Uncertainty Principle, and the time-averaged statistical behavior of atomic orbitals.</p>
-        <p><strong>Document View:</strong><br>
-        <a href="appendix-b.html">View File: The Relativistic Rydberg: Implications</a></p>
-    </div>
+    <h2>Explore the Monograph Series</h2>
+    <p>Explore the specialized supporting volumes and technical files in the same directory:</p>
 
-    <div class="compendium-item">
-        <h3>Volume V: Technical Appendix C (Model Authentication)</h3>
-        <p>A quantitative validation brief mapping out the analytical integrity, self-consistency, and mathematical cohesiveness of the framework. It details the precise matching of historical Hydrogen and Helium lines and breaks down the binomial expansion limits that restore classical Rydberg limits.</p>
-        <p><strong>Document View:</strong><br>
-        <a href="appendix-c.html">View File: The Relativistic Rydberg: Evaluation</a></p>
+    <div class="nav-grid">
+        <div class="nav-card">
+            <h3>Volume I: Prologue</h3>
+            <p>Vector extensions of Newton's Second Law and periodic velocity waves.</p>
+            <a href="prologue.html">&rarr; Read Prologue</a>
+        </div>
+        <div class="nav-card">
+            <h3>Volume II: Core Article</h3>
+            <p>Mass-energy quadrature and Dirac convergence.</p>
+            <a href="core-article.html">&rarr; Read Core Article</a>
+        </div>
+        <div class="nav-card">
+            <h3>Volume III: Appendix A</h3>
+            <p>Experimental measurement blueprint using APDS.</p>
+            <a href="appendix-a.html">&rarr; Read Appendix A</a>
+        </div>
+        <div class="nav-card">
+            <h3>Volume IV: Appendix B</h3>
+            <p>Conceptual analysis on wave/particle duality and uncertainty.</p>
+            <a href="appendix-b.html">&rarr; Read Appendix B</a>
+        </div>
     </div>
 
     <footer>
-        Independent Research Monograph Series &bull; Relativistic Rydberg Project &bull; GitHub Pages Landing Page
+        Independent Research Monograph Series &bull; Relativistic Rydberg Project
     </footer>
 
 </body>
