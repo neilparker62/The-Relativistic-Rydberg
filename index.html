@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Relativistic Rydberg: A High-Precision Universal Formula for Hydrogenic Systems</title>
+    <title>The Relativistic Rydberg: A High-Precision Universal Formula for Bound Hydrogenic Systems</title>
+    <!-- Include MathJax for professional formula rendering -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style>
         :root {
             --primary-color: #1a365d;
@@ -74,8 +77,7 @@
             padding: 15px 20px;
             border-radius: 6px;
             text-align: center;
-            font-family: "Times New Roman", Times, serif;
-            font-size: 1.25rem;
+            font-size: 1.15rem;
             margin: 1.5rem 0;
             color: #1a202c;
             overflow-x: auto;
@@ -168,10 +170,10 @@
         <p>The core energy eigenvalue relation for bound hydrogenic systems is expressed as:</p>
 
         <div class="equation-box">
-            E<sub>n</sub> = &mu;c<sup>2</sup> &radic;(1 &minus; (Z<sup>2</sup>&alpha;<sup>2</sup> / n<sup>2</sup>))
+            $$E_n = \mu c^2 \sqrt{1 - \frac{Z^2\alpha^2}{n^2}}$$
         </div>
 
-        <p>Where <em>&mu;</em> is the reduced mass, <em>c</em> is the speed of light, <em>Z</em> is the atomic number, <em>&alpha;</em> is the fine-structure constant, and <em>n</em> is the principal quantum number. When evaluated under maximum angular momentum boundary conditions (<em>l<sub>max</sub> = n &minus; 1</em> and <em>j<sub>max</sub> = l + 1/2</em>), this equation converges formally with the exact eigenvalue spectrum derived from the relativistic Dirac Hamiltonian.</p>
+        <p>Where \(\mu\) is the reduced mass, \(c\) is the speed of light, \(Z\) is the atomic number, \(\alpha\) is the fine-structure constant, and \(n\) is the principal quantum number. When evaluated under maximum angular momentum boundary conditions (\(l_{\text{max}} = n - 1\) and \(j_{\text{max}} = l + 1/2\)), this equation converges formally with the exact eigenvalue spectrum derived from the relativistic Dirac Hamiltonian.</p>
     </div>
 
     <div class="section-card">
@@ -218,7 +220,7 @@
                 </tr>
                 <tr>
                     <td><strong>Lyman Alpha (H)</strong></td>
-                    <td>cm<sup>&minus;1</sup></td>
+                    <td>\(\text{cm}^{-1}\)</td>
                     <td>82259.5565</td>
                     <td>0.2726</td>
                     <td>Lamb shift</td>
@@ -229,7 +231,7 @@
                 </tr>
                 <tr>
                     <td><strong>Lyman Alpha (D)</strong></td>
-                    <td>cm<sup>&minus;1</sup></td>
+                    <td>\(\text{cm}^{-1}\)</td>
                     <td>82281.9392</td>
                     <td>0.2730</td>
                     <td>Lamb shift</td>
@@ -259,7 +261,7 @@
             <tbody>
                 <tr>
                     <td><strong>Balmer Alpha (H)</strong></td>
-                    <td>cm<sup>&minus;1</sup></td>
+                    <td>\(\text{cm}^{-1}\)</td>
                     <td>15233.07093</td>
                     <td>&mdash;</td>
                     <td>&mdash;</td>
@@ -270,7 +272,7 @@
                 </tr>
                 <tr>
                     <td><strong>Balmer Alpha (D)</strong></td>
-                    <td>cm<sup>&minus;1</sup></td>
+                    <td>\(\text{cm}^{-1}\)</td>
                     <td>15237.21583</td>
                     <td>&mdash;</td>
                     <td>&mdash;</td>
@@ -280,8 +282,8 @@
                     <td>29.71</td>
                 </tr>
                 <tr>
-                    <td><strong>He 3d<sub>5/2</sub> to 4f<sub>7/2</sub></strong></td>
-                    <td>cm<sup>&minus;1</sup></td>
+                    <td><strong>He \(3d_{5/2}\) to \(4f_{7/2}\)</strong></td>
+                    <td>\(\text{cm}^{-1}\)</td>
                     <td>21335.0838</td>
                     <td>&mdash;</td>
                     <td>&mdash;</td>
@@ -299,7 +301,7 @@
         <p>The classical Rydberg formula widely used in standard calculations is not replaced, but rather understood as a natural limiting case. By applying a one-term binomial expansion to the core square-root expression of the Relativistic Rydberg formula:</p>
 
         <div class="equation-box">
-            &mu;c<sup>2</sup> &radic;(1 &minus; (Z<sup>2</sup>&alpha;<sup>2</sup> / n<sup>2</sup>)) &approx; &mu;c<sup>2</sup> &minus; (&mu;c<sup>2</sup> Z<sup>2</sup> &alpha;<sup>2</sup> / 2n<sup>2</sup>)
+            $$\mu c^2 \sqrt{1 - \frac{Z^2\alpha^2}{n^2}} \approx \mu c^2 - \frac{\mu c^2 Z^2 \alpha^2}{2n^2}$$
         </div>
 
         <p>the traditional non-relativistic expression drops out cleanly. This establishes that the formula retains full structural compatibility with historical baselines while offering enhanced precision.</p>
@@ -307,7 +309,7 @@
 
     <div class="section-card">
         <h2>4. Physical Cohesiveness &amp; Framework Summary</h2>
-        <p>By connecting classical dynamics with relativistic motion, the framework provides a clear, self-consistent computational method for analyzing atomic transitions, helical electron trajectories, and magnetic invariants such as the Bohr magneton (<em>&mu;<sub>B</sub></em>).</p>
+        <p>By connecting classical dynamics with relativistic motion, the framework provides a clear, self-consistent computational method for analyzing atomic transitions, helical electron trajectories, and magnetic invariants such as the Bohr magneton (\(\mu_B\)).</p>
     </div>
 
     <h2>Explore the Monograph Series</h2>
