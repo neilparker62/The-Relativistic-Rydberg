@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://neilparker62.github.io/The-Relativistic-Rydberg/sitemap.xml
